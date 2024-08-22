@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.getElementById("search-input");
     const frameContainer = document.getElementById("dynamic-content_block");
+    const filterRowContainer = document.getElementById("quickfilter-container_default");
+    const defaultFilter = filterRowContainer.innerHTML;
     const clearSearch = document.getElementById("search-clear_button");
     const originalContent = frameContainer.innerHTML;
 
@@ -9,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let isChatFilterActive = false;
     let isManagementFilterActive = false;
     let isHelpFilterActive = false;
+
 
     // filter const
     const allQuickFilter = document.getElementById("quick-filter_all");
@@ -29,6 +32,38 @@ document.addEventListener("DOMContentLoaded", function() {
             allFilter = false
         }
     }
+
+    //search filter experience
+    const searchFilter = document.getElementById("search-filter_button");
+    const closeFilter = document.getElementById("close-filter");
+    advancedFilterContainer = document.getElementById("quickfilter-container_default").style.display = "";
+    advancedFilterContainerActive = document.getElementById("quickfilter-container_active").style.display = "none";
+
+    searchFilter.addEventListener("click", function(){
+        const click = searchFilter.click.active;
+        console.log("filter pressed")
+        if (click === false) {
+            advancedFilterContainer = document.getElementById("quickfilter-container_default").style.display = "";
+            advancedFilterContainerActive = document.getElementById("quickfilter-container_active").style.display = "none";
+        } else {
+            advancedFilterContainer = document.getElementById("quickfilter-container_default").style.display = "none";
+            advancedFilterContainerActive = document.getElementById("quickfilter-container_active").style.display = "";
+        };
+    });
+
+    closeFilter.addEventListener("click", function(){
+        const click = closeFilter.click.active;
+        console.log("close clicked on")
+        if (click === false) {
+            advancedFilterContainer = document.getElementById("quickfilter-container_default").style.display = "none";
+            advancedFilterContainerActive = document.getElementById("quickfilter-container_active").style.display = "";
+        } else {
+            advancedFilterContainer = document.getElementById("quickfilter-container_default").style.display = "";
+            advancedFilterContainerActive = document.getElementById("quickfilter-container_active").style.display = "none";
+        };
+    })
+
+    
 
     //back page navigation
     document.addEventListener("keydown", function(event){
@@ -330,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <div class="inline-row_nested">
                                 <div class="inline-text_container">
                                     <div class="upper_inline-text_container">
-                                        <h4 class="inline-title_text">Platform (Genesys Solutions)</h4>
+                                        <h4 class="inline-title_text">How to view the Genesys Cloud Platform?</h4>
                                     </div>
                                     <div class="lower_inline-text_container">
                                         <p class="inline-body_text">The Genesys Business Optimization – Platform solution represents the tools and technologies that manage the infrastructure and configuration of the systems that host all of the products.</p>
@@ -560,7 +595,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="inline-row_nested">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
-                                    <h4 class="inline-title_text">Platform (Genesys Solutions)</h4>
+                                    <h4 class="inline-title_text">How to view the Genesys Cloud Platform?</h4>
                                 </div>
                                 <div class="lower_inline-text_container">
                                     <p class="inline-body_text">The Genesys Business Optimization – Platform solution represents the tools and technologies that manage the infrastructure and configuration of the systems that host all of the products.</p>
@@ -790,7 +825,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="inline-row_nested">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
-                                    <h4 class="inline-title_text">Platform (Genesys Solutions)</h4>
+                                    <h4 class="inline-title_text">How to view the Genesys Cloud Platform?</h4>
                                 </div>
                                 <div class="lower_inline-text_container">
                                     <p class="inline-body_text">The Genesys Business Optimization – Platform solution represents the tools and technologies that manage the infrastructure and configuration of the systems that host all of the products.</p>
@@ -1020,7 +1055,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="inline-row_nested">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
-                                    <h4 class="inline-title_text">Platform (Genesys Solutions)</h4>
+                                    <h4 class="inline-title_text">How to view the Genesys Cloud Platform?</h4>
                                 </div>
                                 <div class="lower_inline-text_container">
                                     <p class="inline-body_text">The Genesys Business Optimization – Platform solution represents the tools and technologies that manage the infrastructure and configuration of the systems that host all of the products.</p>
