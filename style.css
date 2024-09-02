@@ -24,24 +24,31 @@
 .header {
     display: flex;
     width: 100%;
-    background-color: #F8F8F8;
+    border-bottom: 1px solid #F1F3FA;
+    background: #FFF;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-end;
-    padding: 12px;
+    padding: 16px 24px;
     box-sizing: border-box;
 }
+
+.header-right_aligned {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
 
 .search-wrapper {
     display: flex;
     width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 12px;
-    margin-left: 100%;
 }
 
 .top-nav_search-field-active {
@@ -76,7 +83,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 4px;
-    background: var(--color-cornflower-200, #E4E5E7);
+    background: var(--color-lavenderhaze-200, #F3F5FB);
     border: transparent;
     cursor: pointer;
 }
@@ -116,7 +123,7 @@
     margin-bottom: 40px;
     top: 0;
     bottom: 0; 
-    right: 364px;
+    right: 258px;
     display: flex;
     width: 440px;
     padding: 24px 16px;
@@ -165,28 +172,31 @@
 .dynamic-content_block {
     display: flex;
     width: 100%;
+    height: 100%;
+    overflow: scroll; 
+    flex-direction: column;
+    gap: 24px;
 
 }
 
 .content-body {
     display: flex;
-    padding-left: 12px;
-    padding-right: 12px;
     flex-direction: column;
     align-items: center;
     width: 100%;
     gap: 8px;
     align-self: stretch;
+    box-sizing: border-box;
 }
 
 .content-subtitle_text {
     color: var(--color-cornflower-800, #23395D);
-    font-family: "Patrick Hand";
-    font-size: 16px;
+    font-family: Urbanist;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 112.5% */
-    display: flex;
+    font-weight: 600;
+    line-height: 27px; /* 150% */
+    letter-spacing: 0.36px;
     align-items: center;
     gap: 8px;
     align-self: stretch;
@@ -196,11 +206,11 @@
 
 .content-section {
     display: flex;
+    height: auto;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     align-self: stretch;
-    margin-top: 12px;
 }
 
 .content-subtitle {
@@ -216,11 +226,11 @@
 .search-field {
     display: flex;
     width: 448px;
-    padding: 7px 12px;
+    padding: 5px 12px;
     align-items: center;
     gap: 8px;
-    border-radius: 8px;
-    background: var(--color-cornflower-100, #E4E5E7);
+    border-radius: 4px;
+    background: var(--color-lavenderhaze-200, #F3F5FB);
     justify-content: space-between;
 }
 
@@ -235,12 +245,12 @@
     display: flex;
     flex: 1;
     align-items: center;
-    color: var(--color-cornflower-600, #626E84);
-    font-family: "Patrick Hand";
-    font-size: 14px;
+    color: var(--color-cornflower-700, #3E5374);
+    font-family: "Noto Sans";
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px; /* 128.571% */
+    line-height: 18px; /* 150% */
     border: transparent;
     background-color: transparent;
     outline: none;
@@ -248,25 +258,24 @@
 
 .search-field_input:placeholder-shown {
     overflow: hidden;
-    color: var(--color-cornflower-600, #626E84);
-    text-overflow: ellipsis;
-    font-family: "Patrick Hand";
-    font-size: 14px;
+    color: var(--color-cornflower-400, #A3A7B0);
+    font-family: "Noto Sans";
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px; /* 128.571% */
+    line-height: 18px; /* 150% */
 }
 
 .clear-search {
     background: transparent;
     border: transparent;
     overflow: hidden;
-    color: var(--color-cornflower-500, #767C8D);
+    color: var(--color-cornflower-600, #626E84);
     text-overflow: ellipsis;
-    font-family: "Patrick Hand";
+    font-family: "Noto Sans";
     font-size: 12px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 18px; /* 150% */
     cursor: pointer;
 }
@@ -281,7 +290,7 @@
 
 .search-divider {
     width: 1px;
-    height: 22px;
+    height: 20px;
     flex-shrink: 0;
     border-radius: 32px;
     background: var(--color-cornflower-400, #A3A7B0);
@@ -289,23 +298,23 @@
 
 .quick-filter_all {
     display: flex;
-    padding: 4px 12px;
+    height: var(--button-height, 32px);
+    padding: 0px 12px;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    border-radius: 4px;
-    border: 1px solid var(--color-cornflower-400, #A3A7B0);
-    background: var(--color-cornflower-400, #A3A7B0);
-    color: var(--color-cornflower-1000, #0F1929);
-    font-family: "Patrick Hand";
+    gap: 8px;
+    border-radius: var(--button-border_radius, 4px);
+    background: var(--button-secondary-default-background_color, #EFF0FE);
+    color: var(--button-secondary-default-foreground_color, #4856CB);
+    font-family: "Noto Sans";
     font-size: 12px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 150% */
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
     cursor: pointer;
 }
 
-.quick-filter_all.active {
+.quick-filter_all-active {
     display: flex;
     padding: 4px 12px;
     justify-content: center;
@@ -324,19 +333,20 @@
 
 .quick-filter_button {
     display: flex;
-    padding: 4px 12px;
+    height: var(--button-height, 32px);
+    padding: 0px 12px;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    border-radius: 4px;
-    border: 1px solid var(--color-cornflower-300, #C6C8CE);
-    background: var(--color-white, #FFF);
-    color: var(--color-cornflower-700, #3E5374);
-    font-family: "Patrick Hand";
+    gap: 8px;
+    border-radius: var(--button-border_radius, 4px);
+    border: 1px solid var(--button-tertiary-default-foreground_color, #4856CB);
+    background: var(--button-tertiary-default-background_color, rgba(0, 0, 0, 0.00));
+    color: var(--button-tertiary-default-foreground_color, #4856CB);
+    font-family: "Noto Sans";
     font-size: 12px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 150% */
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
     cursor: pointer;
 }
 
@@ -421,8 +431,17 @@
 
 /* Inline-row - Side Sheet */
 
+.content-container_subtitle-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
 .inline-row {
     display: flex;
+    width: 100%;
     align-items: center;
     gap: 8px;
     align-self: stretch;
@@ -437,15 +456,14 @@
 
 .sm-avatar {
     display: flex;
-    width: 32px;
-    height: 32px;
-    border-radius: 2px;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    width: 40px;
+    height: 40px;
 }
 
 .inline-text_container {
     display: flex;
     width: 306px;
+    gap: 2px;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -453,7 +471,33 @@
 .upper_inline-text_container {
     display: flex;
     align-items: center;
+    gap: 8px;
+}
+
+.inline-divider {
+    width: 1px;
+    height: 10px;
+    background-color: var(--color-cornflower-300, #C6C8CE);
+}
+
+.inline-activity_bar {
+    display: flex;
+    align-items: center;
     gap: 4px;
+}
+
+.inactive-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: var(--color-warning-main, #F8C73E);
+}
+
+.active-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: #09B581;
 }
 
 .lower_inline-text_container {
@@ -464,22 +508,21 @@
 }
 
 .search-text {
-    color: var(--color-cornflower-600, #626E84);
-    font-family: "Patrick Hand";
-    font-size: 16px;
+    color: var(--color-cornflower-400, #A3A7B0);
+    font-family: "Noto Sans";
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 18px; /* 150% */
 }
 
 .inline-title_text {
-    align-self: stretch;
     color: var(--color-cornflower-700, #3E5374);
-    font-family: "Patrick Hand";
-    font-size: 14px;
+    font-family: "Noto Sans";
+    font-size: 12px;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-weight: 600;
+    line-height: 18px; /* 150% */
 }
 
 .inline-body_text {
@@ -504,8 +547,14 @@
 }
 
 .inline-footnote_text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    flex: 1 0 0;
+    overflow: hidden;
     color: var(--color-cornflower-500, #767C8D);
-    font-family: "Patrick Hand";
+    text-overflow: ellipsis;
+    font-family: "Noto Sans";
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -550,6 +599,58 @@
     background: var(--color-cornflower-100, #F2F2F3);
 }
 
+/* Help Section Element */
+
+#search-help_block {
+    display: flex;
+    width: 100%;
+}
+
+.help-block {
+    display: flex;
+    width: 100%;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(--color-lavenderhaze-500, #C6CEEC);
+    background: var(--color-lavenderhaze-100, #FBFCFE);
+    box-sizing: border-box;
+}
+
+.help-block_nested {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.help-block_upper-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 4px;
+}
+
+.help-title_text {
+    color: var(--color-primary-main, #4856CB);
+    font-family: "Noto Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 150% */
+}
+
+.help-body_text {
+    color: var(--color-primary-main, #4856CB);
+    font-family: "Noto Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
 
 
 

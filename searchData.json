@@ -1,0 +1,1209 @@
+
+[
+    {
+        "result_title": "Subscription",
+        "result_subtitle": "Account Settings > Subscription",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Genesys AppFoundry",
+        "result_subtitle": "Account Settings > Genesys AppFoundry",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Organization Settings",
+        "result_subtitle": "Account Settings > Organization Settings",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "People",
+        "result_subtitle": "People & Permissions > People",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Roles/Permissions",
+        "result_subtitle": "People & Permissions > Roles/Permissions",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Authorized Organization",
+        "result_subtitle": "People & Permissions > Authorized Organizations",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Divisions",
+        "result_subtitle": "People & Permissions > Divisions",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Groups",
+        "result_subtitle": "Directory > Groups",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Work Teams",
+        "result_subtitle": "Directory > Work Team",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Locations",
+        "result_subtitle": "Directory > Locations",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Profile Fields",
+        "result_subtitle": "Directory > Profile Fields",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "External Contacts",
+        "result_subtitle": "Directory > External Contacts",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Integrations",
+        "result_subtitle": "Integrations > Integrations",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Actions",
+        "result_subtitle": "Integrations > Actions",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Single Sign-on",
+        "result_subtitle": "Integrations > Single Sign-on",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "OAuth",
+        "result_subtitle": "Integrations > OAuth",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Authorized Applications",
+        "result_subtitle": "Integrations > Authorized Applications",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Workspaces",
+        "result_subtitle": "Documents > Workspaces",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Topology",
+        "result_subtitle": "Telephony > Topology",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Metrics",
+        "result_subtitle": "Telephony > Metrics",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Trunks",
+        "result_subtitle": "Telephony > Trunks",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Sites",
+        "result_subtitle": "Telephony > Sites",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Edge Groups",
+        "result_subtitle": "Telephony > Edge Groups",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Edge",
+        "result_subtitle": "Telephony > Edge",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Phone Management",
+        "result_subtitle": "Telephony > Phone Management",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Certificate Authorities",
+        "result_subtitle": "Telephony > Certificate Authorities",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "DID Numbers",
+        "result_subtitle": "Telephony > DID Numbers",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Extensions",
+        "result_subtitle": "Telephony > Extensions",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Global Telephony Settings",
+        "result_subtitle": "Telephony > Global Telephony Settings",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Assistants",
+        "result_subtitle": "Contact Center > Assistants",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "ACD Skills & Languages",
+        "result_subtitle": "Contact Center > ACD Skills & Languages",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Utilization",
+        "result_subtitle": "Contact Center > Utilization",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Queues",
+        "result_subtitle": "Contact Center > Queues",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Wrap-Up Codes",
+        "result_subtitle": "Contact Center > Wrap-Up Codes",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Email",
+        "result_subtitle": "Contact Center > Email",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Canned Responses",
+        "result_subtitle": "Contact Center > Canned Responses",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Response Assets",
+        "result_subtitle": "Contact Center > Response Assets",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Co-browse",
+        "result_subtitle": "Contact Center > Co-browse",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Widgets",
+        "result_subtitle": "Contact Center > Widgets",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Panel Manager",
+        "result_subtitle": "Contact Center > Panel Manager",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Scripts",
+        "result_subtitle": "Contact Center > Scripts",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Script Templates",
+        "result_subtitle": "Contact Center > Script Templates",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Number Management",
+        "result_subtitle": "Genesys Cloud Voice > Number Management",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Platforms",
+        "result_subtitle": "Message > Platforms",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Platform Configs",
+        "result_subtitle": "Message > Platform Configs",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "SMS Number Inventory",
+        "result_subtitle": "Message > SMS Number Inventory",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Supported Content Profiles",
+        "result_subtitle": "Message > Supported Content Profiles",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Threading Timeline",
+        "result_subtitle": "Message > Threading Timeline",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Messenger Configurations",
+        "result_subtitle": "Message > Messenger Configurations",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Messenger Deployments",
+        "result_subtitle": "Message > Messenger Deployments",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Architect",
+        "result_subtitle": "Architect > Architect",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Data Tables",
+        "result_subtitle": "Architect > Data Tables",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Flow Outcomes",
+        "result_subtitle": "Architect > Flow Outcomes",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Flow Milestones",
+        "result_subtitle": "Architect > Flow Milestones",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Triggers",
+        "result_subtitle": "Architect > Triggers",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Live Now",
+        "result_subtitle": "Predictive Engagement > Live Now",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Segments",
+        "result_subtitle": "Predictive Engagement > Segments",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Outcomes",
+        "result_subtitle": "Predictive Engagement > Outcomes",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Action Maps",
+        "result_subtitle": "Predictive Engagement > Action Maps",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Action Library",
+        "result_subtitle": "Predictive Engagement > Action Library",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Global Settings",
+        "result_subtitle": "Predictive Engagement > Global Settings",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Visitor Activity Report",
+        "result_subtitle": "Predictive Engagement > Visitor Activity Report",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Action Map Report",
+        "result_subtitle": "Predictive Engagement > Action Map Report",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Operating Schedules",
+        "result_subtitle": "Routing > Operating Schedules",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Call Routing",
+        "result_subtitle": "Routing > Call Routing",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Message Routing",
+        "result_subtitle": "Routing > Message Routing",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Emergency Groups",
+        "result_subtitle": "Routing > Emergency Groups",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Disconnect Interaction",
+        "result_subtitle": "Routing > Disconnect Interactions",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Development and Feedback",
+        "result_subtitle": "Performance & Engagement > Development and Feedback",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "External Metric Definitions",
+        "result_subtitle": "Performance & Engagement > External Metric Definitions",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Gamifications Settings",
+        "result_subtitle": "Performance & Engagement > Gamification Settings",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Gamification Profiles",
+        "result_subtitle": "Performance & Engagement > Gamification Profiles",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "API Usage",
+        "result_subtitle": "Platform Usage > API Usage",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Audit Viewer",
+        "result_subtitle": "Troubleshooting > Audit Viewer",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Log Capture",
+        "result_subtitle": "Troubleshooting > Log Capture",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Operational Console",
+        "result_subtitle": "Troubleshooting > Operational Console",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Business Units",
+        "result_subtitle": "Workforce Management > Business Units",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Management Units",
+        "result_subtitle": "Workforce Management > Management Units",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Service Goal Templates",
+        "result_subtitle": "Workforce Management > Service Goal Templates",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Planning Groups",
+        "result_subtitle": "Workforce Management > Planning Groups",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Staffing Groups",
+        "result_subtitle": "Workforce Management > Staffing Groups",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Agents",
+        "result_subtitle": "Workforce Management > Agents",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Activity Codes",
+        "result_subtitle": "Workforce Management > Activity Codes",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Work Plan Configurations",
+        "result_subtitle": "Workforce Management > Work Plan Configurations",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Work Plan Bids",
+        "result_subtitle": "Workforce Management > Work Plan Bids",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Work Plan Rotations",
+        "result_subtitle": "Workforce Management > Work Plan Rotations",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Forecasts",
+        "result_subtitle": "Workforce Management > Forecasts",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Time-Off Limits",
+        "result_subtitle": "Workforce Management > Time-Off Limits",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Time-Off Plans",
+        "result_subtitle": "Workforce Management > Time-Off Plans",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Time-Off Requests",
+        "result_subtitle": "Workforce Management > Time-Off Requests",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Schedules",
+        "result_subtitle": "Workforce Management > Schedules",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Activity Plans",
+        "result_subtitle": "Workforce Management > Activity Plans",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Shift Trades",
+        "result_subtitle": "Workforce Management > Shift Trades",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Intraday Monitoring",
+        "result_subtitle": "Workforce Management > Intraday Monitoring",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Real-Time Adherence",
+        "result_subtitle": "Workforce Management > Real-Time Adherence",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Historical Adherence",
+        "result_subtitle": "Workforce Management > Historical Adherence",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Historical Shrinkage",
+        "result_subtitle": "Workforce Management > Historical Shrinkage",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Historical Data Import",
+        "result_subtitle": "Workforce Management > Historical Data Import",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Campaign Management",
+        "result_subtitle": "Outbound > Campaign Management",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "List Management",
+        "result_subtitle": "Outbound > List Management",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Contactable Time Sets",
+        "result_subtitle": "Outbound > Contactable Time Sets",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Call Analysis Responses",
+        "result_subtitle": "Outbound > Call Analysis Responses",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Rule Management",
+        "result_subtitle": "Outbound > Rule Management",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Wrap-Up Code Mappings",
+        "result_subtitle": "Outbound > Wrap-Up Code Mappings",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Event Viewer",
+        "result_subtitle": "Outbound > Event Viewer",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "Outbound Settings",
+        "result_subtitle": "Outbound > Outbound Settings",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "category": "page"
+    },
+    {
+        "result_title": "James Smith",
+        "result_subtitle": "Focused on delivering impactful solutions.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image3.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Emma Johnson",
+        "result_subtitle": "Empowering teams through effective communication.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image7.png",
+        "category": "people"
+    },
+    {
+        "result_title": "John Williams",
+        "result_subtitle": "Driven by a passion for innovation.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image9.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Olivia Brown",
+        "result_subtitle": "Dedicated to continuous learning.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image2.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Michael Miller",
+        "result_subtitle": "Thrives on tackling challenging problems.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image4.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Sophia Davis",
+        "result_subtitle": "Passionate about user-centered design.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image6.png",
+        "category": "people"
+    },
+    {
+        "result_title": "David Wilson",
+        "result_subtitle": "Always seeking to improve and innovate.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image10.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Isabella Martinez",
+        "result_subtitle": "Enthusiastic about collaboration and growth.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image4.png",
+        "category": "people"
+    },
+    {
+        "result_title": "William Anderson",
+        "result_subtitle": "Committed to excellence in every task.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image1.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Mia Thompson",
+        "result_subtitle": "Focused on creating value through teamwork.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image8.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Noah Harris",
+        "result_subtitle": "Strives for innovation in every project.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image6.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Ava Clark",
+        "result_subtitle": "Empowering teams with clear communication.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image3.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Liam Hall",
+        "result_subtitle": "Committed to delivering excellence.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image8.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Charlotte Rodriguez",
+        "result_subtitle": "Driven by a passion for creative solutions.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image9.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Benjamin Lewis",
+        "result_subtitle": "Always ready for new challenges.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image7.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Mia Walker",
+        "result_subtitle": "A strong believer in teamwork and innovation.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image10.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Elijah Young",
+        "result_subtitle": "Focused on delivering impactful solutions.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image5.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Amelia King",
+        "result_subtitle": "Striving to make a difference every day.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image2.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Mason Wright",
+        "result_subtitle": "Dedicated to creating innovative solutions.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image2.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Isabella Scott",
+        "result_subtitle": "Believes in the power of collaboration.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image5.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Lucas Hill",
+        "result_subtitle": "Passionate about continuous improvement.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image9.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Sophia Adams",
+        "result_subtitle": "Thrives on tackling complex challenges.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image7.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Henry Green",
+        "result_subtitle": "Driven by a commitment to excellence.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image4.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Evelyn Baker",
+        "result_subtitle": "Focused on user-centric design.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image1.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Alexander Nelson",
+        "result_subtitle": "Innovating through strategic thinking.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image1.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Avery Carter",
+        "result_subtitle": "Empowering others through collaboration.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image8.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Daniel Mitchell",
+        "result_subtitle": "Dedicated to achieving measurable results.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image6.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Harper White",
+        "result_subtitle": "Believes in the power of data-driven decisions.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image4.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Sebastian Perez",
+        "result_subtitle": "A leader in strategic innovation.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image10.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Ella Thompson",
+        "result_subtitle": "Committed to fostering a positive work environment.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image6.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Matthew Robinson",
+        "result_subtitle": "Dedicated to excellence in project delivery.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image2.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Abigail Harris",
+        "result_subtitle": "Focused on delivering innovative solutions.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image3.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Joseph Martinez",
+        "result_subtitle": "Passionate about building strong teams.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image8.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Grace Sanchez",
+        "result_subtitle": "Strives for excellence in every task.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image2.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Jackson Wright",
+        "result_subtitle": "Driven by a passion for problem-solving.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image9.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Scarlett Lee",
+        "result_subtitle": "Always ready to tackle new challenges.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image10.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Samuel Scott",
+        "result_subtitle": "Committed to continuous learning.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image4.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Victoria King",
+        "result_subtitle": "Focused on driving innovation.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image1.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Levi Adams",
+        "result_subtitle": "Thrives on delivering complex projects.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image7.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Zoe Hill",
+        "result_subtitle": "Dedicated to improving processes.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image9.png",
+        "category": "people"
+    },
+    {
+        "result_title": "David Ramirez",
+        "result_subtitle": "Focused on creating meaningful impact.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image6.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Penelope Green",
+        "result_subtitle": "Driven by a love for problem-solving.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image7.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Daniel Martinez",
+        "result_subtitle": "Striving to exceed expectations.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image1.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Lily Anderson",
+        "result_subtitle": "Passionate about empowering others.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image5.png",
+        "category": "people"
+    },
+    {
+        "result_title": "David Clark",
+        "result_subtitle": "Believes in the power of teamwork.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image2.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Mia Lopez",
+        "result_subtitle": "Focused on delivering high-quality results.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image8.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Andrew Rodriguez",
+        "result_subtitle": "Committed to continuous improvement.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image5.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Ella Scott",
+        "result_subtitle": "Thrives in collaborative environments.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image3.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Ryan Lewis",
+        "result_subtitle": "Dedicated to delivering impactful solutions.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image7.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Grace Lee",
+        "result_subtitle": "Strives for excellence in every task.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image4.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Ethan Walker",
+        "result_subtitle": "Believes in the power of data-driven decisions.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image9.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Avery Harris",
+        "result_subtitle": "Focused on fostering a positive work culture.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image7.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Samuel King",
+        "result_subtitle": "Driven by a commitment to innovation.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image6.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Scarlett Moore",
+        "result_subtitle": "Passionate about creating value through innovation.",
+        "chat_quick-action": false,
+        "favourite_quick-action": false,
+        "image": "female-image2.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Joshua Wright",
+        "result_subtitle": "Always looking for new challenges.",
+        "chat_quick-action": true,
+        "favourite_quick-action": false,
+        "image": "men-image3.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Amelia Young",
+        "result_subtitle": "Dedicated to driving positive change.",
+        "chat_quick-action": false,
+        "favourite_quick-action": true,
+        "image": "female-image6.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Jacob Martinez",
+        "result_subtitle": "Committed to delivering exceptional results.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "men-image10.png",
+        "category": "people"
+    },
+    {
+        "result_title": "Sam Limby",
+        "result_subtitle": "Product Designer for Global Search.",
+        "chat_quick-action": true,
+        "favourite_quick-action": true,
+        "image": "image1.png",
+        "category": "people"
+    }
+]
