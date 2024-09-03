@@ -304,7 +304,32 @@
     align-items: center;
     gap: 8px;
     border-radius: var(--button-border_radius, 4px);
-    background: var(--button-secondary-default-background_color, #EFF0FE);
+    background: var(--color-lavenderhaze-200, #F3F5FB);
+    color: var(--button-secondary-default-foreground_color, #4856CB);
+    border: transparent;
+    font-family: "Noto Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 133.333% */
+    cursor: pointer;
+}
+
+.quick-filter_all:hover {
+    background: #EFF0FE;
+}
+
+.quick-filter_all-active {
+    display: flex;
+    display: flex;
+    height: var(--button-height, 32px);
+    padding: 0px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: var(--button-border_radius, 4px);
+    border: transparent;
+    background: #C6CEEC;
     color: var(--button-secondary-default-foreground_color, #4856CB);
     font-family: "Noto Sans";
     font-size: 12px;
@@ -314,21 +339,8 @@
     cursor: pointer;
 }
 
-.quick-filter_all-active {
-    display: flex;
-    padding: 4px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 4px;
-    border: 1px solid var(--color-cornflower-400, #A3A7B0);
-    background: var(--color-white, #FFF);
-    color: var(--color-cornflower-700, #3E5374);
-    font-family: "Patrick Hand";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 150% */
+.quick-filter_all-active:hover {
+    background: var(--color-lavenderhaze-300, #B5BFE6);
 }
 
 .quick-filter_button {
@@ -350,21 +362,8 @@
     cursor: pointer;
 }
 
-.quick-filter_button.active {
-    display: flex;
-    padding: 4px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 4px;
-    border: 1px solid var(--color-cornflower-400, #A3A7B0);
-    background: var(--color-cornflower-100, #F2F2F3);
-    color: var(--color-cornflower-700, #3E5374);
-    font-family: "Patrick Hand";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px; /* 150% */
+.quick-filter_button:hover {
+    background-color: var(--color-lavenderhaze-200, #F3F5FB);
 }
 
 .advanced-filter_container {
@@ -376,7 +375,16 @@
     gap: 8px;
     align-self: stretch;
     border-radius: 8px;
-    background: var(--color-cornflower-100, #F2F2F3);
+    background: var(--color-lavenderhaze-200, #F3F5FB);
+}
+
+.help-subtitle_text {
+    color: var(--color-primary-main, #4856CB);
+    font-family: "Noto Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 150% */
 }
 
 .advanced-filter_container-header {
@@ -395,13 +403,14 @@
     gap: 10px;
     align-self: stretch;
     border-radius: 4px;
-    border: 1px dashed var(--color-cornflower-400, #A3A7B0);
+    border: 1px dashed var(--color-lavenderhaze-600, #B5BFE6);
+    background: var(--color-lavenderhaze-300, #E8EBF7);
 }
 
 .filter-placeholder_text {
-    color: var(--color-cornflower-800, #23395D);
-    font-family: "Patrick Hand";
-    font-size: 14px;
+    color: var(--color-primary-main, #4856CB);
+    font-family: "Noto Sans";
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px; /* 150% */

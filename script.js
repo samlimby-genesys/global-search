@@ -10,16 +10,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const peopleContainer = document.createElement("div")
     const pageContainer = document.createElement("div");
-
-    // content section
-    let isPeopleFilterActive = false;
-    let isPageFilterActive = false;
     
     
     // filter const
-    const allQuickFilter = document.getElementById("quick-filter_all");
+    let allQuickFilter = document.getElementById("quick-filter_all");
+    let allQuickFilterCount = 1;
     let peopleQuickFilter = document.getElementById("quick-filter_people");
-    let pageQuickFilter = document.getElementById("quick-filter_chat");
+    let peopleQuickFilterCount = 1;
+    let pageQuickFilter = document.getElementById("quick-filter_page");
+    let pageQuickFilterCount = 1;
+
 
     // Fetch the JSON data
     fetch('searchData.json') 
@@ -176,19 +176,6 @@ document.addEventListener("DOMContentLoaded", function() {
         
     }
 
-    let allFilter = true;
-
-    function allFilterActive() {
-        if (allFilter === true) {
-            isPeopleFilterActive = false
-            isChatFilterActive = false
-            isManagementFilterActive = false 
-            isHelpFilterActive = false
-        } else {
-            allFilter = false
-        }
-    }
-
     //search filter experience
     const searchFilter = document.getElementById("search-filter_button");
     const closeFilter = document.getElementById("close-filter");
@@ -226,154 +213,98 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.key === "Escape") {
             window.location.href = "default.html"
         }
-        console.log("keybaord pressed!")
+        console.log("keyboard pressed!")
     });
-
-    //filter const active icons
-    function createSVGElement(svgString) {
-        const template = document.createElement("template");
-        template.innerHTML = svgString.trim();
-        return template.content.firstChild;
-    }
-
-    const allFilterDefaultSVGString =`
-        <svg id="quick-filter_icon-all" id="quick-filter_icon-all" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M9.56219 8.79233C9.78157 9.01134 9.78157 9.36669 9.56219 9.58573C9.3428 9.80477 8.98684 9.80474 8.76743 9.58573L6.00054 6.80298L3.21398 9.58479C2.99459 9.80381 2.63863 9.80381 2.41922 9.58479C2.19981 9.36578 2.19983 9.01043 2.41922 8.79139L5.20672 6.01052L2.41845 3.20767C2.19906 2.98866 2.19906 2.63331 2.41845 2.41427C2.63784 2.19523 2.99379 2.19526 3.2132 2.41427L6.00054 5.21805L8.7871 2.43624C9.00649 2.21723 9.36244 2.21723 9.58186 2.43624C9.80127 2.65526 9.80124 3.01061 9.58186 3.22964L6.79436 6.01052L9.56219 8.79233Z" fill="#0F1929"/>
-        </svg> 
-    `;
-
-    const allFilterActiveSVGString = `
-        <svg id="quick-filter_icon-all" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M10.5 5.99978C10.5 6.28752 10.2685 6.51901 9.98077 6.51901H6.51923V9.98055C6.51923 10.2672 6.28666 10.5 6 10.5C5.71334 10.5 5.48077 10.2683 5.48077 9.98055V6.51901H2.01923C1.73257 6.51901 1.5 6.28666 1.5 6C1.5 5.71421 1.73257 5.48055 2.01923 5.48055H5.48077V2.01901C5.48077 1.73236 5.71334 1.5 6 1.5C6.28666 1.5 6.51923 1.73236 6.51923 2.01901V5.48055H9.98077C10.2685 5.48055 10.5 5.71421 10.5 5.99978Z" fill="#3E5374"/>
-        </svg>
-    `;
-
-    const uncheckedQuickFilterIcon = `
-        <svg id="quick-filter_icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M10.2857 0C11.2312 0 12 0.767411 12 1.71429V10.2857C12 11.2312 11.2312 12 10.2857 12H1.71429C0.767411 12 0 11.2312 0 10.2857V1.71429C0 0.767411 0.767411 0 1.71429 0H10.2857ZM10.2857 1.28571H1.71429C1.4775 1.28571 1.28571 1.4775 1.28571 1.71429V10.2857C1.28571 10.5214 1.4775 10.7143 1.71429 10.7143H10.2857C10.5214 10.7143 10.7143 10.5214 10.7143 10.2857V1.71429C10.7143 1.4775 10.5214 1.28571 10.2857 1.28571Z" fill="#3E5374"/>
-        </svg>
-    `;
-
-    const checkedQuickFilterIcon = `
-        <svg id="quick-filter_icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M1.71429 0C0.76875 0 0 0.768564 0 1.71387V10.2832C0 11.2285 0.76875 11.9971 1.71429 11.9971H10.2857C11.2312 11.9971 12 11.2285 12 10.2832V1.71387C12 0.768564 11.2312 0 10.2857 0H1.71429ZM9.02678 4.73993L5.59821 8.16767C5.34643 8.4194 4.93929 8.4194 4.69018 8.16767L2.97589 6.4538C2.72411 6.20207 2.72411 5.79503 2.97589 5.54598C3.22768 5.29694 3.63482 5.29426 3.88393 5.54598L5.14286 6.80461L8.11607 3.82943C8.36786 3.57771 8.775 3.57771 9.02411 3.82943C9.27321 4.08116 9.27589 4.4882 9.02411 4.73725L9.02678 4.73993Z" fill="#3E5374"/>
-        </svg>
-    `;
-
-    const uncheckedQuickFilterIconChat = `
-        <svg id="quick-filter_icon-chat" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M10.2857 0C11.2312 0 12 0.767411 12 1.71429V10.2857C12 11.2312 11.2312 12 10.2857 12H1.71429C0.767411 12 0 11.2312 0 10.2857V1.71429C0 0.767411 0.767411 0 1.71429 0H10.2857ZM10.2857 1.28571H1.71429C1.4775 1.28571 1.28571 1.4775 1.28571 1.71429V10.2857C1.28571 10.5214 1.4775 10.7143 1.71429 10.7143H10.2857C10.5214 10.7143 10.7143 10.5214 10.7143 10.2857V1.71429C10.7143 1.4775 10.5214 1.28571 10.2857 1.28571Z" fill="#3E5374"/>
-        </svg>
-    `;
-
-    const checkedQuickFilterIconChat = `
-        <svg id="quick-filter_icon-chat" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M1.71429 0C0.76875 0 0 0.768564 0 1.71387V10.2832C0 11.2285 0.76875 11.9971 1.71429 11.9971H10.2857C11.2312 11.9971 12 11.2285 12 10.2832V1.71387C12 0.768564 11.2312 0 10.2857 0H1.71429ZM9.02678 4.73993L5.59821 8.16767C5.34643 8.4194 4.93929 8.4194 4.69018 8.16767L2.97589 6.4538C2.72411 6.20207 2.72411 5.79503 2.97589 5.54598C3.22768 5.29694 3.63482 5.29426 3.88393 5.54598L5.14286 6.80461L8.11607 3.82943C8.36786 3.57771 8.775 3.57771 9.02411 3.82943C9.27321 4.08116 9.27589 4.4882 9.02411 4.73725L9.02678 4.73993Z" fill="#3E5374"/>
-        </svg>
-    `;
-
-    const uncheckedQuickFilterIconManagement = `
-        <svg id="quick-filter_icon-management" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M10.2857 0C11.2312 0 12 0.767411 12 1.71429V10.2857C12 11.2312 11.2312 12 10.2857 12H1.71429C0.767411 12 0 11.2312 0 10.2857V1.71429C0 0.767411 0.767411 0 1.71429 0H10.2857ZM10.2857 1.28571H1.71429C1.4775 1.28571 1.28571 1.4775 1.28571 1.71429V10.2857C1.28571 10.5214 1.4775 10.7143 1.71429 10.7143H10.2857C10.5214 10.7143 10.7143 10.5214 10.7143 10.2857V1.71429C10.7143 1.4775 10.5214 1.28571 10.2857 1.28571Z" fill="#3E5374"/>
-        </svg>
-    `;
-
-    const checkedQuickFilterIconManagement = `
-        <svg id="quick-filter_icon-management" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M1.71429 0C0.76875 0 0 0.768564 0 1.71387V10.2832C0 11.2285 0.76875 11.9971 1.71429 11.9971H10.2857C11.2312 11.9971 12 11.2285 12 10.2832V1.71387C12 0.768564 11.2312 0 10.2857 0H1.71429ZM9.02678 4.73993L5.59821 8.16767C5.34643 8.4194 4.93929 8.4194 4.69018 8.16767L2.97589 6.4538C2.72411 6.20207 2.72411 5.79503 2.97589 5.54598C3.22768 5.29694 3.63482 5.29426 3.88393 5.54598L5.14286 6.80461L8.11607 3.82943C8.36786 3.57771 8.775 3.57771 9.02411 3.82943C9.27321 4.08116 9.27589 4.4882 9.02411 4.73725L9.02678 4.73993Z" fill="#3E5374"/>
-        </svg>
-    `;
-
-    const uncheckedQuickFilterIconHelp = `
-        <svg id="quick-filter_icon-help" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M10.2857 0C11.2312 0 12 0.767411 12 1.71429V10.2857C12 11.2312 11.2312 12 10.2857 12H1.71429C0.767411 12 0 11.2312 0 10.2857V1.71429C0 0.767411 0.767411 0 1.71429 0H10.2857ZM10.2857 1.28571H1.71429C1.4775 1.28571 1.28571 1.4775 1.28571 1.71429V10.2857C1.28571 10.5214 1.4775 10.7143 1.71429 10.7143H10.2857C10.5214 10.7143 10.7143 10.5214 10.7143 10.2857V1.71429C10.7143 1.4775 10.5214 1.28571 10.2857 1.28571Z" fill="#3E5374"/>
-        </svg>
-    `;
-
-    const checkedQuickFilterIconHelp = `
-        <svg id="quick-filter_icon-help" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M1.71429 0C0.76875 0 0 0.768564 0 1.71387V10.2832C0 11.2285 0.76875 11.9971 1.71429 11.9971H10.2857C11.2312 11.9971 12 11.2285 12 10.2832V1.71387C12 0.768564 11.2312 0 10.2857 0H1.71429ZM9.02678 4.73993L5.59821 8.16767C5.34643 8.4194 4.93929 8.4194 4.69018 8.16767L2.97589 6.4538C2.72411 6.20207 2.72411 5.79503 2.97589 5.54598C3.22768 5.29694 3.63482 5.29426 3.88393 5.54598L5.14286 6.80461L8.11607 3.82943C8.36786 3.57771 8.775 3.57771 9.02411 3.82943C9.27321 4.08116 9.27589 4.4882 9.02411 4.73725L9.02678 4.73993Z" fill="#3E5374"/>
-        </svg>
-    `;
-
 
     clearSearch.addEventListener("click", function(){
         searchInput.value = "";
         frameContainer.innerHTML = originalContent;
     });
 
-    peopleQuickFilter.addEventListener("click", function() {
-        const currentIcon = document.getElementById("quick-filter_icon");
-        let newIcon;
-        isPeopleFilterActive = !isPeopleFilterActive;
-        console.log(isPeopleFilterActive)
-        console.log("people filter is active")
-
-        if (isPeopleFilterActive) {
-            peopleContainer.style.display = ""
-            newIcon = createSVGElement(checkedQuickFilterIcon);
-            console.log(isPeopleFilterActive)
-            allFilter = false;
-        } else {
-            newIcon = createSVGElement(uncheckedQuickFilterIcon);
-            peopleContainer.style.display = "none"
-        };
-
-        if (newIcon) {
-            peopleQuickFilter.replaceChild(newIcon, currentIcon);
-        } else {
-            console.error ("new icon element was not created");
-        }
-
-    })
-
-    pageQuickFilter.addEventListener("click", function() {
-        const currentIcon = document.getElementById("quick-filter_icon");
-        let newIcon;
-        isPageFilterActive = !isPageFilterActive;
-        console.log(isPeopleFilterActive)
-        console.log("page filter is active")
-
-        if (isPageFilterActive) {
-            pageContainer.style.display = ""
-            newIcon = createSVGElement(checkedQuickFilterIcon);
-            console.log(isPageFilterActive)
-            allFilter = false;
-        } else {
-            newIcon = createSVGElement(uncheckedQuickFilterIcon);
-            pageContainer.style.display = "none"
-        };
-
-        if (newIcon) {
-            pageQuickFilter.replaceChild(newIcon, currentIcon);
-        } else {
-            console.error ("new icon element was not created");
-        }
-
-    })
+    // quick filter actions
 
     allQuickFilter.addEventListener("click", function() {
-        const currentIcon = document.getElementById("quick-filter_icon-all");
-        let newIcon;
-
-        if (allQuickFilter.classList.contains("active")) {
-            allQuickFilter.classList.remove("active");
-            newIcon = createSVGElement(allFilterDefaultSVGString);
-            allFilter = true;
-        } else {
-            allQuickFilter.classList.add("active")
-            allFilter = false;
-            newIcon = createSVGElement(allFilterActiveSVGString);
-        };
-
-        if (newIcon) {
-            allQuickFilter.replaceChild(newIcon, currentIcon);
-        } else {
-            console.error ("new icon element was not created");
-        }
-
-        allFilterAction()
-
+        console.log("all filter is pressed!")
+        allFilter();
     });
 
+    peopleQuickFilter.addEventListener("click", function() {
+        console.log("people filter is pressed")
+        peopleFilter();
+    });
+
+    pageQuickFilter.addEventListener("click", function() {
+        console.log("page filter is pressed");
+        pageFilter();
+    });
+
+    //quick filter functions
+
+    function allFilter() {
+        if (allQuickFilterCount === 1) {
+            allQuickFilter.innerHTML = `
+                    <img src="icons/plus.png">
+                    All
+            `;
+            allQuickFilterCount = 0;
+            allQuickFilter.classList.replace("quick-filter_all", "quick-filter_all-active")
+            peopleQuickFilterCount = 1;
+            pageQuickFilterCount = 1;
+            peopleFilter()
+            pageFilter()
+        } else {
+            allQuickFilter.innerHTML = `
+                    <img src="icons/close.png">
+                    All
+            `;
+            allQuickFilterCount = 1;
+            peopleQuickFilterCount = 0;
+            pageQuickFilterCount = 0;
+            peopleFilter()
+            pageFilter()
+            allQuickFilter.classList.replace("quick-filter_all-active", "quick-filter_all")
+            console.log(allQuickFilterCount)
+        };
+
+    };
+
+
+    function peopleFilter() {
+        console.log("people invoked")
+        if (peopleQuickFilterCount === 1) {
+            peopleQuickFilter.innerHTML = `
+                    <img src="icons/unchecked.png">
+                    People
+            `
+            peopleQuickFilterCount = 0;
+            document.getElementById("people-container").style.display = "none";
+        } else {
+            peopleQuickFilter.innerHTML = `
+                    <img src="icons/checked.png">
+                    People
+            `
+            peopleQuickFilterCount = 1;
+            document.getElementById("people-container").style.display = "";
+        };
+    };
+    
+
+    function pageFilter() {
+        console.log("page invoked")
+        if (pageQuickFilterCount === 1) {
+            pageQuickFilter.innerHTML = `
+                    <img src="icons/unchecked.png">
+                    Genesys Cloud Page
+            `
+            pageQuickFilterCount = 0;
+            document.getElementById("page-container").style.display = "none";
+        } else {
+            pageQuickFilter.innerHTML = `
+                    <img src="icons/checked.png">
+                    Genesys Cloud Page
+            `
+            pageQuickFilterCount = 1;
+            document.getElementById("page-container").style.display = "";
+        };
+    }
 });
