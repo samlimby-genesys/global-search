@@ -5,63 +5,48 @@
   	<meta name="viewport" content="initial-scale=1, width=device-width">
   	<link rel="stylesheet"  href="style.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick Hand:wght@400&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Global Search Wireframe</title>
 </head>
 <body>
     <script src="script.js"></script>
+    <script src="searchData.json"></script>
   	<div class="body-main">
     	<div class="header">
             <div class="search-wrapper">
-                <div class="search-field">
-                    <div class="search-left_aligned">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M15.7574 14.7188L11.5687 10.5312C12.4752 9.42188 12.9754 8.025 12.9754 6.5C12.9754 2.90937 10.0643 0 6.47362 0C2.88297 0 0 2.91031 0 6.5C0 10.0897 2.91079 13 6.47362 13C7.99871 13 9.39784 12.4716 10.506 11.5925L14.6946 15.78C14.8696 15.9281 15.0634 16 15.2541 16C15.4448 16 15.638 15.9267 15.7846 15.7803C16.0762 15.4875 16.0762 15.0125 15.7574 14.7188ZM1.50041 6.5C1.50041 3.74312 3.74414 1.5 6.50175 1.5C9.25937 1.5 11.5031 3.74312 11.5031 6.5C11.5031 9.25688 9.25937 11.5 6.50175 11.5C3.74414 11.5 1.50041 9.25625 1.50041 6.5Z" fill="#23395D"/>
-                        </svg>
-                        <input class="search-field_input" type="text" placeholder="Search across Genesys Cloud" id="search-input" autocomplete="off"/>
+                <img class="header-left "src="images/left-aligned.png">
+                <div class="header-right_aligned">
+                    <div class="search-field">
+                        <div class="search-left_aligned">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M15.7574 14.7188L11.5687 10.5312C12.4752 9.42188 12.9754 8.025 12.9754 6.5C12.9754 2.90937 10.0643 0 6.47362 0C2.88297 0 0 2.91031 0 6.5C0 10.0897 2.91079 13 6.47362 13C7.99871 13 9.39784 12.4716 10.506 11.5925L14.6946 15.78C14.8696 15.9281 15.0634 16 15.2541 16C15.4448 16 15.638 15.9267 15.7846 15.7803C16.0762 15.4875 16.0762 15.0125 15.7574 14.7188ZM1.50041 6.5C1.50041 3.74312 3.74414 1.5 6.50175 1.5C9.25937 1.5 11.5031 3.74312 11.5031 6.5C11.5031 9.25688 9.25937 11.5 6.50175 11.5C3.74414 11.5 1.50041 9.25625 1.50041 6.5Z" fill="#4856CB"/>
+                            </svg>
+                            <input class="search-field_input" type="text" placeholder="Search across Genesys Cloud" id="search-input" autocomplete="off"/>
+                        </div>
+                        <button class="clear-search" id="search-clear_button">Clear</button>
+                        <div class="search-divider"></div>
+                        <img class="filter-button" src="icons/filter.png" id="search-filter_button">
                     </div>
-                    <button class="clear-search" id="search-clear_button">Clear</button>
-                    <div class="search-divider"></div>
-                    <img class="filter-button" src="icons/filter.png" id="search-filter_button">
+                    <img src="images/right-aligned.png">
                 </div>
-                <div class="sm-nav_block"></div>
-                <div class="sm-nav_block"></div>
-                <div class="sm-nav_block"></div>
-                <div class="sm-nav_block"></div>
-                <div class="lg-nav_block"></div>
             </div>
         </div>
-        <div class="floating-side-sheet">
+        <div class="floating-side-sheet" id="floating-side-sheet">
         	<div class="search-container">
                 <div class="search-container_lower-row" id="quickfilter-container_default">
                     <div class="quick-filter_all" id="quick-filter_all">
-                        <svg id="quick-filter_icon-all" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M9.56219 8.79233C9.78157 9.01134 9.78157 9.36669 9.56219 9.58573C9.3428 9.80477 8.98684 9.80474 8.76743 9.58573L6.00054 6.80298L3.21398 9.58479C2.99459 9.80381 2.63863 9.80381 2.41922 9.58479C2.19981 9.36578 2.19983 9.01043 2.41922 8.79139L5.20672 6.01052L2.41845 3.20767C2.19906 2.98866 2.19906 2.63331 2.41845 2.41427C2.63784 2.19523 2.99379 2.19526 3.2132 2.41427L6.00054 5.21805L8.7871 2.43624C9.00649 2.21723 9.36244 2.21723 9.58186 2.43624C9.80127 2.65526 9.80124 3.01061 9.58186 3.22964L6.79436 6.01052L9.56219 8.79233Z" fill="#0F1929"/>
-                        </svg> 
+                        <img src="icons/plus.png">
                        All
                     </div>
                     <button class="quick-filter_button" id="quick-filter_people">
-                        <svg id="quick-filter_icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M10.2857 0C11.2312 0 12 0.767411 12 1.71429V10.2857C12 11.2312 11.2312 12 10.2857 12H1.71429C0.767411 12 0 11.2312 0 10.2857V1.71429C0 0.767411 0.767411 0 1.71429 0H10.2857ZM10.2857 1.28571H1.71429C1.4775 1.28571 1.28571 1.4775 1.28571 1.71429V10.2857C1.28571 10.5214 1.4775 10.7143 1.71429 10.7143H10.2857C10.5214 10.7143 10.7143 10.5214 10.7143 10.2857V1.71429C10.7143 1.4775 10.5214 1.28571 10.2857 1.28571Z" fill="#3E5374"/>
-                        </svg>
+                        <img src="icons/checked.png">
                         People
                     </button>
                     <button class="quick-filter_button" id="quick-filter_chat">
-                        <svg id="quick-filter_icon-chat" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M10.2857 0C11.2312 0 12 0.767411 12 1.71429V10.2857C12 11.2312 11.2312 12 10.2857 12H1.71429C0.767411 12 0 11.2312 0 10.2857V1.71429C0 0.767411 0.767411 0 1.71429 0H10.2857ZM10.2857 1.28571H1.71429C1.4775 1.28571 1.28571 1.4775 1.28571 1.71429V10.2857C1.28571 10.5214 1.4775 10.7143 1.71429 10.7143H10.2857C10.5214 10.7143 10.7143 10.5214 10.7143 10.2857V1.71429C10.7143 1.4775 10.5214 1.28571 10.2857 1.28571Z" fill="#3E5374"/>
-                        </svg>
-                        Chat
-                    </button>
-                    <button class="quick-filter_button" id="quick-filter_management">
-                        <svg id="quick-filter_icon-management" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M10.2857 0C11.2312 0 12 0.767411 12 1.71429V10.2857C12 11.2312 11.2312 12 10.2857 12H1.71429C0.767411 12 0 11.2312 0 10.2857V1.71429C0 0.767411 0.767411 0 1.71429 0H10.2857ZM10.2857 1.28571H1.71429C1.4775 1.28571 1.28571 1.4775 1.28571 1.71429V10.2857C1.28571 10.5214 1.4775 10.7143 1.71429 10.7143H10.2857C10.5214 10.7143 10.7143 10.5214 10.7143 10.2857V1.71429C10.7143 1.4775 10.5214 1.28571 10.2857 1.28571Z" fill="#3E5374"/>
-                        </svg>
-                        Management
-                    </button>
-                    <button class="quick-filter_button" id="quick-filter_help">
-                        <svg id="quick-filter_icon-help" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M10.2857 0C11.2312 0 12 0.767411 12 1.71429V10.2857C12 11.2312 11.2312 12 10.2857 12H1.71429C0.767411 12 0 11.2312 0 10.2857V1.71429C0 0.767411 0.767411 0 1.71429 0H10.2857ZM10.2857 1.28571H1.71429C1.4775 1.28571 1.28571 1.4775 1.28571 1.71429V10.2857C1.28571 10.5214 1.4775 10.7143 1.71429 10.7143H10.2857C10.5214 10.7143 10.7143 10.5214 10.7143 10.2857V1.71429C10.7143 1.4775 10.5214 1.28571 10.2857 1.28571Z" fill="#3E5374"/>
-                        </svg>
-                        Help
+                        <img src="icons/checked.png">
+                        Genesys Cloud Pages
                     </button>
                 </div>
                 <div class="advanced-filter_container" id="quickfilter-container_active">
@@ -84,9 +69,18 @@
                         <div class="inline-row_nested">
                             <img class="sm-avatar" src="images/image1.png">
                             <div class="inline-text_container">
-                                <h4 class="inline-title_text">Sam Limby</h4>
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">Sam Limby</h4>
+                                    <div class="inline-divider"></div>
+                                    <div class="inline-activity_bar">
+                                        <div class="inactive-circle"></div>
+                                        <p class="inline-footnote_text">
+                                            Last signed in: 3 hours ago
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">Last signed in: 3 hours ago</p>
+                                    <p class="inline-footnote_text">Accessed: 4 hours ago</p>
                                 </div>
                             </div>
                         </div>
@@ -95,17 +89,24 @@
                                 <img class="chat-icon" src="icons/chat.png">
                             </div>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
+                        <img src="icons/open.png">
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
-                            <img class="sm-avatar" src="images/image2.png">
+                            <img class="sm-avatar" src="images/female-image5.png">
                             <div class="inline-text_container">
-                                <h4 class="inline-title_text">Jane Doe</h4>
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">Jane Doe</h4>
+                                    <div class="inline-divider"></div>
+                                    <div class="inline-activity_bar">
+                                        <div class="active-circle"></div>
+                                        <p class="inline-footnote_text">
+                                            Active
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">Last signed in: 23 minutes ago</p>
+                                    <p class="inline-footnote_text">Accessed: 5 hours ago</p>
                                 </div>
                             </div>
                         </div>
@@ -114,202 +115,79 @@
                                 <img class="chat-icon" src="icons/chat.png">
                             </div>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
+                        <img src="icons/open.png">
+                    </div>
+                    <div class="inline-row">
+                        <div class="inline-row_nested">
+                            <img class="sm-avatar" src="images/icon-avatar.png">
+                            <div class="inline-text_container">
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">Roles & Permissions</h4>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">
+                                        People & Permissions > Roles/Permissions
+                                    </p>
+                                </div>
+                                <div class="lower_inline-text_container">
+                                    <p class="inline-footnote_text">Accessed: 5 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="icons/open.png">
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
                             <img class="sm-avatar" src="images/placeholder.png">
                             <div class="inline-text_container">
-                                <h4 class="inline-title_text">test group</h4>
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">test group</h4>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">
+                                        Group members: 45 users
+                                    </p>
+                                </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">Group members: 45 users</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-                                        <circle cx="4" cy="4" r="4" fill="#C6C8CE"/>
-                                    </svg>
-                                    <p class="inline-body_text">People</p>
+                                    <p class="inline-footnote_text">Accessed: 6 hours ago</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="quick-action">
-                            <div class="quick-action-nested">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                    <path d="M7.99888 0.805176C8.27773 0.805176 8.53234 0.963012 8.65358 1.21164L10.7329 5.4591L15.3794 6.14155C15.6522 6.18064 15.8765 6.37004 15.9644 6.62859C16.0493 6.89015 15.9796 7.17576 15.7856 7.36516L12.4151 10.6782L13.2122 15.3532C13.2577 15.6238 13.1456 15.9004 12.9182 16.0597C12.6939 16.219 12.3696 16.2401 12.1514 16.1108L7.99888 13.9101L3.82213 16.1108C3.6039 16.2401 3.30686 16.219 3.07953 16.0597C2.85523 15.9004 2.74309 15.6238 2.76127 15.3532L3.58268 10.6782L0.215517 7.36516C0.019713 7.17576 -0.0496973 6.89015 0.0363837 6.62859C0.122162 6.37004 0.348579 6.18064 0.621068 6.14155L5.2649 5.4591L7.34418 1.21164C7.46845 0.962982 7.72002 0.805176 7.99888 0.805176ZM7.99888 3.17874L6.40759 6.43318C6.3015 6.64663 6.0954 6.79695 5.85898 6.83303L2.27267 7.35614L4.87692 9.9146C5.04363 10.08 5.11941 10.3175 5.08 10.549L4.46774 14.1446L7.65637 12.455C7.87157 12.3408 8.12921 12.3408 8.34138 12.455L11.53 14.1446L10.9178 10.549C10.8783 10.3175 10.9572 10.08 11.1239 9.9146L13.7275 7.35614L10.1418 6.83303C9.90236 6.79695 9.69625 6.64663 9.59319 6.43318L7.99888 3.17874Z" fill="#3E5374"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
+                        <img src="icons/open.png">
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M4.63695 4.22244C4.63695 3.91549 4.93736 3.66688 5.30825 3.66688H7.32214C7.69135 3.66688 7.99344 3.91549 7.99344 4.22244V5.88911C7.99344 6.19466 7.69135 6.44466 7.32214 6.44466H5.30825C4.93736 6.44466 4.63695 6.19466 4.63695 5.88911V4.22244ZM12.6925 3.66688C13.0617 3.66688 13.3638 3.91549 13.3638 4.22244V5.88911C13.3638 6.19466 13.0617 6.44466 12.6925 6.44466H10.6786C10.3094 6.44466 10.0073 6.19466 10.0073 5.88911V4.22244C10.0073 3.91549 10.3094 3.66688 10.6786 3.66688H12.6925ZM4.63695 8.66688C4.63695 8.36133 4.93736 8.11133 5.30825 8.11133H7.32214C7.69135 8.11133 7.99344 8.36133 7.99344 8.66688V10.3336C7.99344 10.6391 7.69135 10.8891 7.32214 10.8891H5.30825C4.93736 10.8891 4.63695 10.6391 4.63695 10.3336V8.66688ZM12.6925 8.11133C13.0617 8.11133 13.3638 8.36133 13.3638 8.66688V10.3336C13.3638 10.6391 13.0617 10.8891 12.6925 10.8891H10.6786C10.3094 10.8891 10.0073 10.6391 10.0073 10.3336V8.66688C10.0073 8.36133 10.3094 8.11133 10.6786 8.11133H12.6925ZM0.944824 2.83355C0.944824 1.60612 2.14686 0.611328 3.63001 0.611328H14.3708C15.8518 0.611328 17.0559 1.60612 17.0559 2.83355V16.1669C17.0559 17.3926 15.8518 18.3891 14.3708 18.3891H3.63001C2.14686 18.3891 0.944824 17.3926 0.944824 16.1669V2.83355ZM2.95871 2.83355V16.1669C2.95871 16.4724 3.25912 16.7224 3.63001 16.7224H6.98649V14.5002C6.98649 13.5801 7.88855 12.8336 9.00038 12.8336C10.1122 12.8336 11.0143 13.5801 11.0143 14.5002V16.7224H14.3708C14.74 16.7224 15.042 16.4724 15.042 16.1669V2.83355C15.042 2.52661 14.74 2.27799 14.3708 2.27799H3.63001C3.25912 2.27799 2.95871 2.52661 2.95871 2.83355Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
-                            <div class="inline-text_container">
-                                <h4 class="inline-title_text">action needed</h4>
-                                <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">To be used for the customer action needed interaction events</p>
-                                </div>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
-                    </div>
-                    <div class="inline-row">
-                        <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M4.63695 4.22244C4.63695 3.91549 4.93736 3.66688 5.30825 3.66688H7.32214C7.69135 3.66688 7.99344 3.91549 7.99344 4.22244V5.88911C7.99344 6.19466 7.69135 6.44466 7.32214 6.44466H5.30825C4.93736 6.44466 4.63695 6.19466 4.63695 5.88911V4.22244ZM12.6925 3.66688C13.0617 3.66688 13.3638 3.91549 13.3638 4.22244V5.88911C13.3638 6.19466 13.0617 6.44466 12.6925 6.44466H10.6786C10.3094 6.44466 10.0073 6.19466 10.0073 5.88911V4.22244C10.0073 3.91549 10.3094 3.66688 10.6786 3.66688H12.6925ZM4.63695 8.66688C4.63695 8.36133 4.93736 8.11133 5.30825 8.11133H7.32214C7.69135 8.11133 7.99344 8.36133 7.99344 8.66688V10.3336C7.99344 10.6391 7.69135 10.8891 7.32214 10.8891H5.30825C4.93736 10.8891 4.63695 10.6391 4.63695 10.3336V8.66688ZM12.6925 8.11133C13.0617 8.11133 13.3638 8.36133 13.3638 8.66688V10.3336C13.3638 10.6391 13.0617 10.8891 12.6925 10.8891H10.6786C10.3094 10.8891 10.0073 10.6391 10.0073 10.3336V8.66688C10.0073 8.36133 10.3094 8.11133 10.6786 8.11133H12.6925ZM0.944824 2.83355C0.944824 1.60612 2.14686 0.611328 3.63001 0.611328H14.3708C15.8518 0.611328 17.0559 1.60612 17.0559 2.83355V16.1669C17.0559 17.3926 15.8518 18.3891 14.3708 18.3891H3.63001C2.14686 18.3891 0.944824 17.3926 0.944824 16.1669V2.83355ZM2.95871 2.83355V16.1669C2.95871 16.4724 3.25912 16.7224 3.63001 16.7224H6.98649V14.5002C6.98649 13.5801 7.88855 12.8336 9.00038 12.8336C10.1122 12.8336 11.0143 13.5801 11.0143 14.5002V16.7224H14.3708C14.74 16.7224 15.042 16.4724 15.042 16.1669V2.83355C15.042 2.52661 14.74 2.27799 14.3708 2.27799H3.63001C3.25912 2.27799 2.95871 2.52661 2.95871 2.83355Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
-                            <div class="inline-text_container">
-                                <h4 class="inline-title_text">Virginia-Customer Queue</h4>
-                                <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">Queue for virginia based customer based</p>
-                                </div>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
-                    </div>
-                    <div class="inline-row">
-                        <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M11.6669 3.63976V9.50043C11.6669 10.5729 10.8697 11.4418 9.88911 11.4418L6.33355 11.4449L3.30855 13.3164C3.24744 13.3681 3.17799 13.3893 3.11133 13.3893C2.93911 13.3893 2.778 13.2405 2.778 13.0247V11.4449H1.88911C0.909939 11.4449 0.111328 10.5729 0.111328 9.50043V3.63976C0.111328 2.59614 0.909939 1.72266 1.88911 1.72266H9.88911C10.8697 1.72266 11.6669 2.59614 11.6669 3.63976ZM4.11133 11.1441L5.98355 9.98654H9.88911C10.1308 9.98654 10.3336 9.76779 10.3336 9.50043V3.6671C10.3336 3.40126 10.1308 3.18099 9.88911 3.18099H1.88911C1.64605 3.18099 1.44466 3.40126 1.44466 3.6671V9.50043C1.44466 9.76779 1.64605 9.98654 1.88911 9.98654H4.11133V11.1441ZM7.22244 13.3893V12.4171H8.55577V13.3893C8.55577 13.6536 8.75577 13.8754 9.00022 13.8754H12.0169L13.8891 15.033V13.8754H16.1113C16.353 13.8754 16.5558 13.6536 16.5558 13.3893V7.55599C16.5558 7.29167 16.353 7.06988 16.1113 7.06988H12.5558V5.61154H16.1113C17.0919 5.61154 17.8891 6.48351 17.8891 7.52865V13.3893C17.8891 14.4618 17.0919 15.3338 16.1113 15.3338H15.2224V16.9136C15.2224 17.1293 15.0613 17.2782 14.8891 17.2782C14.8224 17.2782 14.753 17.2569 14.6919 17.2053L11.6669 15.3338L9.00022 15.3307C8.02244 15.3307 7.22244 14.4618 7.22244 13.3893Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
+                            <img class="sm-avatar" src="images/icon-avatar.png">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
-                                    <h4 class="inline-title_text">John Smith</h4>
-                                    <p class="inline-footnote_text">03/06/2024</p>
+                                    <h4 class="inline-title_text">Operational Console</h4>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">
+                                        Troubleshooting > Operational Console
+                                    </p>
                                 </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">Queue for virginia based customer based</p>
+                                    <p class="inline-footnote_text">Accessed: 2 days ago</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="quick-action">
-                            <div class="quick-action_chat-nested">
-                                <img class="chat-icon" src="icons/star.png">
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
+                        <img src="icons/open.png">
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M4.63695 4.22244C4.63695 3.91549 4.93736 3.66688 5.30825 3.66688H7.32214C7.69135 3.66688 7.99344 3.91549 7.99344 4.22244V5.88911C7.99344 6.19466 7.69135 6.44466 7.32214 6.44466H5.30825C4.93736 6.44466 4.63695 6.19466 4.63695 5.88911V4.22244ZM12.6925 3.66688C13.0617 3.66688 13.3638 3.91549 13.3638 4.22244V5.88911C13.3638 6.19466 13.0617 6.44466 12.6925 6.44466H10.6786C10.3094 6.44466 10.0073 6.19466 10.0073 5.88911V4.22244C10.0073 3.91549 10.3094 3.66688 10.6786 3.66688H12.6925ZM4.63695 8.66688C4.63695 8.36133 4.93736 8.11133 5.30825 8.11133H7.32214C7.69135 8.11133 7.99344 8.36133 7.99344 8.66688V10.3336C7.99344 10.6391 7.69135 10.8891 7.32214 10.8891H5.30825C4.93736 10.8891 4.63695 10.6391 4.63695 10.3336V8.66688ZM12.6925 8.11133C13.0617 8.11133 13.3638 8.36133 13.3638 8.66688V10.3336C13.3638 10.6391 13.0617 10.8891 12.6925 10.8891H10.6786C10.3094 10.8891 10.0073 10.6391 10.0073 10.3336V8.66688C10.0073 8.36133 10.3094 8.11133 10.6786 8.11133H12.6925ZM0.944824 2.83355C0.944824 1.60612 2.14686 0.611328 3.63001 0.611328H14.3708C15.8518 0.611328 17.0559 1.60612 17.0559 2.83355V16.1669C17.0559 17.3926 15.8518 18.3891 14.3708 18.3891H3.63001C2.14686 18.3891 0.944824 17.3926 0.944824 16.1669V2.83355ZM2.95871 2.83355V16.1669C2.95871 16.4724 3.25912 16.7224 3.63001 16.7224H6.98649V14.5002C6.98649 13.5801 7.88855 12.8336 9.00038 12.8336C10.1122 12.8336 11.0143 13.5801 11.0143 14.5002V16.7224H14.3708C14.74 16.7224 15.042 16.4724 15.042 16.1669V2.83355C15.042 2.52661 14.74 2.27799 14.3708 2.27799H3.63001C3.25912 2.27799 2.95871 2.52661 2.95871 2.83355Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
-                            <div class="inline-text_container">
-                                <h4 class="inline-title_text">(09/09/2023) Customer Interaction Transcription</h4>
-                                <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">“hello, so I’m experiencing some issues with my healthcare coverage and need to get information on what I can recieve”</p>
-                                </div>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
-                    </div>
-                    <div class="inline-row">
-                        <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M11.6669 3.63976V9.50043C11.6669 10.5729 10.8697 11.4418 9.88911 11.4418L6.33355 11.4449L3.30855 13.3164C3.24744 13.3681 3.17799 13.3893 3.11133 13.3893C2.93911 13.3893 2.778 13.2405 2.778 13.0247V11.4449H1.88911C0.909939 11.4449 0.111328 10.5729 0.111328 9.50043V3.63976C0.111328 2.59614 0.909939 1.72266 1.88911 1.72266H9.88911C10.8697 1.72266 11.6669 2.59614 11.6669 3.63976ZM4.11133 11.1441L5.98355 9.98654H9.88911C10.1308 9.98654 10.3336 9.76779 10.3336 9.50043V3.6671C10.3336 3.40126 10.1308 3.18099 9.88911 3.18099H1.88911C1.64605 3.18099 1.44466 3.40126 1.44466 3.6671V9.50043C1.44466 9.76779 1.64605 9.98654 1.88911 9.98654H4.11133V11.1441ZM7.22244 13.3893V12.4171H8.55577V13.3893C8.55577 13.6536 8.75577 13.8754 9.00022 13.8754H12.0169L13.8891 15.033V13.8754H16.1113C16.353 13.8754 16.5558 13.6536 16.5558 13.3893V7.55599C16.5558 7.29167 16.353 7.06988 16.1113 7.06988H12.5558V5.61154H16.1113C17.0919 5.61154 17.8891 6.48351 17.8891 7.52865V13.3893C17.8891 14.4618 17.0919 15.3338 16.1113 15.3338H15.2224V16.9136C15.2224 17.1293 15.0613 17.2782 14.8891 17.2782C14.8224 17.2782 14.753 17.2569 14.6919 17.2053L11.6669 15.3338L9.00022 15.3307C8.02244 15.3307 7.22244 14.4618 7.22244 13.3893Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
+                            <img class="sm-avatar" src="images/icon-avatar.png">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
-                                    <h4 class="inline-title_text">Jane Doe</h4>
-                                    <p class="inline-footnote_text">03/08/2034</p>
+                                    <h4 class="inline-title_text">People</h4>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">
+                                        People & Permissions > People
+                                    </p>
                                 </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">Hey, can we have a quick chat?</p>
+                                    <p class="inline-footnote_text">Accessed: 2 days ago</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="quick-action">
-                            <div class="quick-action_chat-nested">
-                                <img class="chat-icon" src="icons/star.png">
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
-                    </div>
-                    <div class="inline-row">
-                        <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M4.63647 4.22244C4.63647 3.91549 4.93687 3.66688 5.30776 3.66688H7.32165C7.69086 3.66688 7.99295 3.91549 7.99295 4.22244V5.88911C7.99295 6.19466 7.69086 6.44466 7.32165 6.44466H5.30776C4.93687 6.44466 4.63647 6.19466 4.63647 5.88911V4.22244ZM12.692 3.66688C13.0612 3.66688 13.3633 3.91549 13.3633 4.22244V5.88911C13.3633 6.19466 13.0612 6.44466 12.692 6.44466H10.6781C10.3089 6.44466 10.0068 6.19466 10.0068 5.88911V4.22244C10.0068 3.91549 10.3089 3.66688 10.6781 3.66688H12.692ZM4.63647 8.66688C4.63647 8.36133 4.93687 8.11133 5.30776 8.11133H7.32165C7.69086 8.11133 7.99295 8.36133 7.99295 8.66688V10.3336C7.99295 10.6391 7.69086 10.8891 7.32165 10.8891H5.30776C4.93687 10.8891 4.63647 10.6391 4.63647 10.3336V8.66688ZM12.692 8.11133C13.0612 8.11133 13.3633 8.36133 13.3633 8.66688V10.3336C13.3633 10.6391 13.0612 10.8891 12.692 10.8891H10.6781C10.3089 10.8891 10.0068 10.6391 10.0068 10.3336V8.66688C10.0068 8.36133 10.3089 8.11133 10.6781 8.11133H12.692ZM0.944336 2.83355C0.944336 1.60612 2.14638 0.611328 3.62952 0.611328H14.3703C15.8513 0.611328 17.0554 1.60612 17.0554 2.83355V16.1669C17.0554 17.3926 15.8513 18.3891 14.3703 18.3891H3.62952C2.14638 18.3891 0.944336 17.3926 0.944336 16.1669V2.83355ZM2.95823 2.83355V16.1669C2.95823 16.4724 3.25863 16.7224 3.62952 16.7224H6.986V14.5002C6.986 13.5801 7.88806 12.8336 8.99989 12.8336C10.1117 12.8336 11.0138 13.5801 11.0138 14.5002V16.7224H14.3703C14.7395 16.7224 15.0416 16.4724 15.0416 16.1669V2.83355C15.0416 2.52661 14.7395 2.27799 14.3703 2.27799H3.62952C3.25863 2.27799 2.95823 2.52661 2.95823 2.83355Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
-                            <div class="inline-text_container">
-                                <h4 class="inline-title_text">Adobe Data Actions</h4>
-                                <div class="lower_inline-text_container">
-                                    <p class="inline-bold-body_text">Integrations > Adobe Data Actions - Last updated: 7 months ago</p>
-                                </div>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
-                    </div>
-                    <div class="inline-row">
-                        <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M4.63647 4.22244C4.63647 3.91549 4.93687 3.66688 5.30776 3.66688H7.32165C7.69086 3.66688 7.99295 3.91549 7.99295 4.22244V5.88911C7.99295 6.19466 7.69086 6.44466 7.32165 6.44466H5.30776C4.93687 6.44466 4.63647 6.19466 4.63647 5.88911V4.22244ZM12.692 3.66688C13.0612 3.66688 13.3633 3.91549 13.3633 4.22244V5.88911C13.3633 6.19466 13.0612 6.44466 12.692 6.44466H10.6781C10.3089 6.44466 10.0068 6.19466 10.0068 5.88911V4.22244C10.0068 3.91549 10.3089 3.66688 10.6781 3.66688H12.692ZM4.63647 8.66688C4.63647 8.36133 4.93687 8.11133 5.30776 8.11133H7.32165C7.69086 8.11133 7.99295 8.36133 7.99295 8.66688V10.3336C7.99295 10.6391 7.69086 10.8891 7.32165 10.8891H5.30776C4.93687 10.8891 4.63647 10.6391 4.63647 10.3336V8.66688ZM12.692 8.11133C13.0612 8.11133 13.3633 8.36133 13.3633 8.66688V10.3336C13.3633 10.6391 13.0612 10.8891 12.692 10.8891H10.6781C10.3089 10.8891 10.0068 10.6391 10.0068 10.3336V8.66688C10.0068 8.36133 10.3089 8.11133 10.6781 8.11133H12.692ZM0.944336 2.83355C0.944336 1.60612 2.14638 0.611328 3.62952 0.611328H14.3703C15.8513 0.611328 17.0554 1.60612 17.0554 2.83355V16.1669C17.0554 17.3926 15.8513 18.3891 14.3703 18.3891H3.62952C2.14638 18.3891 0.944336 17.3926 0.944336 16.1669V2.83355ZM2.95823 2.83355V16.1669C2.95823 16.4724 3.25863 16.7224 3.62952 16.7224H6.986V14.5002C6.986 13.5801 7.88806 12.8336 8.99989 12.8336C10.1117 12.8336 11.0138 13.5801 11.0138 14.5002V16.7224H14.3703C14.7395 16.7224 15.0416 16.4724 15.0416 16.1669V2.83355C15.0416 2.52661 14.7395 2.27799 14.3703 2.27799H3.62952C3.25863 2.27799 2.95823 2.52661 2.95823 2.83355Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
-                            <h4 class="inline-title_text">Roles & Permissions</h4>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
-                    </div>
-                    <div class="inline-row">
-                        <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M4.63647 4.22244C4.63647 3.91549 4.93687 3.66688 5.30776 3.66688H7.32165C7.69086 3.66688 7.99295 3.91549 7.99295 4.22244V5.88911C7.99295 6.19466 7.69086 6.44466 7.32165 6.44466H5.30776C4.93687 6.44466 4.63647 6.19466 4.63647 5.88911V4.22244ZM12.692 3.66688C13.0612 3.66688 13.3633 3.91549 13.3633 4.22244V5.88911C13.3633 6.19466 13.0612 6.44466 12.692 6.44466H10.6781C10.3089 6.44466 10.0068 6.19466 10.0068 5.88911V4.22244C10.0068 3.91549 10.3089 3.66688 10.6781 3.66688H12.692ZM4.63647 8.66688C4.63647 8.36133 4.93687 8.11133 5.30776 8.11133H7.32165C7.69086 8.11133 7.99295 8.36133 7.99295 8.66688V10.3336C7.99295 10.6391 7.69086 10.8891 7.32165 10.8891H5.30776C4.93687 10.8891 4.63647 10.6391 4.63647 10.3336V8.66688ZM12.692 8.11133C13.0612 8.11133 13.3633 8.36133 13.3633 8.66688V10.3336C13.3633 10.6391 13.0612 10.8891 12.692 10.8891H10.6781C10.3089 10.8891 10.0068 10.6391 10.0068 10.3336V8.66688C10.0068 8.36133 10.3089 8.11133 10.6781 8.11133H12.692ZM0.944336 2.83355C0.944336 1.60612 2.14638 0.611328 3.62952 0.611328H14.3703C15.8513 0.611328 17.0554 1.60612 17.0554 2.83355V16.1669C17.0554 17.3926 15.8513 18.3891 14.3703 18.3891H3.62952C2.14638 18.3891 0.944336 17.3926 0.944336 16.1669V2.83355ZM2.95823 2.83355V16.1669C2.95823 16.4724 3.25863 16.7224 3.62952 16.7224H6.986V14.5002C6.986 13.5801 7.88806 12.8336 8.99989 12.8336C10.1117 12.8336 11.0138 13.5801 11.0138 14.5002V16.7224H14.3703C14.7395 16.7224 15.0416 16.4724 15.0416 16.1669V2.83355C15.0416 2.52661 14.7395 2.27799 14.3703 2.27799H3.62952C3.25863 2.27799 2.95823 2.52661 2.95823 2.83355Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
-                            <h4 class="inline-title_text">Operational Console</h4>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
-                    </div>
-                    <div class="inline-row">
-                        <div class="inline-row_nested">
-                            <div class="icon-avatar">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                    <path d="M4.63647 4.22244C4.63647 3.91549 4.93687 3.66688 5.30776 3.66688H7.32165C7.69086 3.66688 7.99295 3.91549 7.99295 4.22244V5.88911C7.99295 6.19466 7.69086 6.44466 7.32165 6.44466H5.30776C4.93687 6.44466 4.63647 6.19466 4.63647 5.88911V4.22244ZM12.692 3.66688C13.0612 3.66688 13.3633 3.91549 13.3633 4.22244V5.88911C13.3633 6.19466 13.0612 6.44466 12.692 6.44466H10.6781C10.3089 6.44466 10.0068 6.19466 10.0068 5.88911V4.22244C10.0068 3.91549 10.3089 3.66688 10.6781 3.66688H12.692ZM4.63647 8.66688C4.63647 8.36133 4.93687 8.11133 5.30776 8.11133H7.32165C7.69086 8.11133 7.99295 8.36133 7.99295 8.66688V10.3336C7.99295 10.6391 7.69086 10.8891 7.32165 10.8891H5.30776C4.93687 10.8891 4.63647 10.6391 4.63647 10.3336V8.66688ZM12.692 8.11133C13.0612 8.11133 13.3633 8.36133 13.3633 8.66688V10.3336C13.3633 10.6391 13.0612 10.8891 12.692 10.8891H10.6781C10.3089 10.8891 10.0068 10.6391 10.0068 10.3336V8.66688C10.0068 8.36133 10.3089 8.11133 10.6781 8.11133H12.692ZM0.944336 2.83355C0.944336 1.60612 2.14638 0.611328 3.62952 0.611328H14.3703C15.8513 0.611328 17.0554 1.60612 17.0554 2.83355V16.1669C17.0554 17.3926 15.8513 18.3891 14.3703 18.3891H3.62952C2.14638 18.3891 0.944336 17.3926 0.944336 16.1669V2.83355ZM2.95823 2.83355V16.1669C2.95823 16.4724 3.25863 16.7224 3.62952 16.7224H6.986V14.5002C6.986 13.5801 7.88806 12.8336 8.99989 12.8336C10.1117 12.8336 11.0138 13.5801 11.0138 14.5002V16.7224H14.3703C14.7395 16.7224 15.0416 16.4724 15.0416 16.1669V2.83355C15.0416 2.52661 14.7395 2.27799 14.3703 2.27799H3.62952C3.25863 2.27799 2.95823 2.52661 2.95823 2.83355Z" fill="#767C8D"/>
-                                </svg>
-                            </div>
-                            <div class="inline-text_container">
-                                <h4 class="inline-title_text">Arlington-Healthcare Queue</h4>
-                                <div class="lower_inline-text_container">
-                                    <p class="inline-bold-body_text">action queue for customers dealing with hospitals in Arlington, VA</p>
-                                </div>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.5051 3.825V12.075C13.5051 12.5305 13.1353 12.9 12.6794 12.9C12.2235 12.9 11.8536 12.5305 11.8536 12.075V5.81531L3.90581 13.7559C3.74341 13.9209 3.53216 14 3.32091 14C3.10965 14 2.8984 13.9194 2.73704 13.7583C2.41448 13.436 2.41448 12.9141 2.73704 12.5916L10.6873 4.65H4.4219C3.96602 4.65 3.59616 4.28219 3.59616 3.825C3.59616 3.36781 3.96602 3 4.4219 3H12.6794C13.137 3 13.5051 3.37125 13.5051 3.825Z" fill="#A3A7B0"/>
-                        </svg>
+                        <img src="icons/open.png">
                     </div>
                 </div>
             </div>
