@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 frameContainer.appendChild(pageContainer);
             }
         } else {
-            frameContainer.innerHTML = '<p>No results found</p>';
+            frameContainer.innerHTML = '<p class="inline-title_text>No results found</p>';
         }
 
         //removing container when no associated results
