@@ -306,5 +306,5 @@ document.addEventListener("DOMContentLoaded", function() {
             pageQuickFilterCount = 1;
             document.getElementById("page-container").style.display = "";
         };
-    }
+    };
 });
