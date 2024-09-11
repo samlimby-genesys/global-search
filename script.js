@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const originalContent = frameContainer.innerHTML;
     let searchData = [];
 
-    //
-
-    const peopleContainer = document.createElement("div")
+    const peopleContainer = document.createElement("div");
+    peopleContainer.setAttribute("id", "people-container");
     const pageContainer = document.createElement("div");
-    
+    pageContainer.setAttribute("id", "page-container");
     
     // filter const
     let allQuickFilter = document.getElementById("quick-filter_all");
     let allQuickFilterCount = 1;
+    
     let peopleQuickFilter = document.getElementById("quick-filter_people");
     let peopleQuickFilterCount = 1;
     let pageQuickFilter = document.getElementById("quick-filter_page");
@@ -30,8 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
             searchData = data;
             // Attach event listeners after the data is loaded
             searchInput.addEventListener('input', filterAndDisplayResults);
-            filterChatButton.addEventListener('click', toggleChatFilter);
-            console.log("getting data")
         })
         .catch(error => {
             console.error('Error fetching the search data:', error);
@@ -69,13 +67,13 @@ document.addEventListener("DOMContentLoaded", function() {
         frameContainer.innerHTML = '';
 
         const filteredResults = searchData.filter(item => {
+            console.log("a")
             // Ensure title are defined before using them
             const title = item.result_title ? item.result_title.toLowerCase() : " ";
             return title.includes(query);
         });
 
         // containers for different categories & help below
-        peopleContainer.setAttribute("id", "people-container");
         peopleContainer.innerHTML = `
             <div class="content-container_subtitle-row">
                 <img src="icons/user-icon.png">
@@ -84,8 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
         peopleContainer.classList.add("content-section");
 
-
-        pageContainer.setAttribute("id", "page-container");
         pageContainer.innerHTML = `
             <div class="content-container_subtitle-row">
                 <img src="icons/page-icon.png">
@@ -105,11 +101,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="inline-row">
                 `;
 
-                // Adding images to just people
+                // specifying id and adding image to just people
                 if (result.category === "people") {
+                    inlineRow.setAttribute("id", "people-inlineRow");
                     innerHTMLContent += `
                         <img class='sm-avatar' src="images/${result.image}"
                     `;
+                };
+
+                if (result.category === "page") {
+                    inlineRow.setAttribute("id", "page-inlineRow");
                 };
                 
                 // Updated HTML structure to include title, description and image
@@ -145,7 +146,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 `;
 
                 inlineRow.innerHTML = innerHTMLContent;
-                
+
+                allQuickFilter.innerHTML = `
+                    <img src="icons/checked.png">
+                    All
+                `;
+
                 if (result.category === "people") {
                     peopleContainer.appendChild(inlineRow);
                 } else if (result.category === "page") {
@@ -174,9 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let helpTextElement = document.getElementById("help-text_block");
         helpTextElement.innerHTML = `<p id="help-text_block" class="help-body_text">23 related articles to “${searchInput.value}” found in help. Click to explore.</p>`
 
-
-        
-    }
+    };
 
     //search filter experience
     const searchFilter = document.getElementById("search-filter_button");
@@ -309,4 +313,52 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("page-container").style.display = "";
         };
     };
+
+    function updateRowCounts() {
+        const pageRows = pageContainer.querySelectorAll('[id^="page-inlineRow"]');
+        const pageCount = pageRows.length;
+
+        document.getElementById("quick-filter_page").innerHTML = `
+            <img src="icons/checked.png">
+            Pages 
+            (${pageCount})
+        `;
+
+        const peopleRows = peopleContainer.querySelectorAll('[id^="people-inlineRow"]');
+        const peopleCount = peopleRows.length;
+
+        document.getElementById("quick-filter_people").innerHTML = `
+            <img src="icons/checked.png">
+            Directory 
+            (${peopleCount})
+        `;
+
+        const totalCount = peopleRows.length + pageRows.length;
+
+        document.getElementById("quick-filter_all").innerHTML = `
+            <img src="icons/checked.png">
+            All 
+            (${totalCount})
+        `;
+    };
+
+    updateRowCounts()
+
+    // Observer for DOM changes
+    const observerConfig = { childList: true, subtree: true }; 
+    const pageObserver = new MutationObserver(updateRowCounts);
+    const peopleObserver = new MutationObserver(updateRowCounts);
+
+    console.log(document.getElementById("page-container")); 
+    if (pageContainer) {
+        pageObserver.observe(pageContainer, observerConfig);
+    } else {
+        console.error("Element does not have the right id attached")
+    }
+
+    if (peopleContainer) {
+        peopleObserver.observe(peopleContainer, observerConfig);
+    } else {
+        console.error("not able to get this element - what's going on!?!")
+    }
 });
