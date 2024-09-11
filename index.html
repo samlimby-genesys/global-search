@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<link rel="stylesheet"  href="style.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick Hand:wght@400&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Global Search Wireframe</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script src="searchData.json"></script>
+  	<div class="body-main">
+    	<div class="header">
+            <div class="search-wrapper">
+                <img class="header-left "src="images/left-aligned.png">
+                <div class="header-right_aligned">
+                    <div class="search-field">
+                        <div class="search-left_aligned">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M15.7574 14.7188L11.5687 10.5312C12.4752 9.42188 12.9754 8.025 12.9754 6.5C12.9754 2.90937 10.0643 0 6.47362 0C2.88297 0 0 2.91031 0 6.5C0 10.0897 2.91079 13 6.47362 13C7.99871 13 9.39784 12.4716 10.506 11.5925L14.6946 15.78C14.8696 15.9281 15.0634 16 15.2541 16C15.4448 16 15.638 15.9267 15.7846 15.7803C16.0762 15.4875 16.0762 15.0125 15.7574 14.7188ZM1.50041 6.5C1.50041 3.74312 3.74414 1.5 6.50175 1.5C9.25937 1.5 11.5031 3.74312 11.5031 6.5C11.5031 9.25688 9.25937 11.5 6.50175 11.5C3.74414 11.5 1.50041 9.25625 1.50041 6.5Z" fill="#4856CB"/>
+                            </svg>
+                            <input class="search-field_input" type="text" placeholder="Search across Genesys Cloud" id="search-input" autocomplete="off"/>
+                        </div>
+                        <button class="clear-search" id="search-clear_button">Clear</button>
+                        <div class="search-divider"></div>
+                        <img class="filter-button" src="icons/filter.png" id="search-filter_button">
+                    </div>
+                    <img src="images/right-aligned.png">
+                </div>
+            </div>
+        </div>
+        <div class="floating-side-sheet" id="floating-side-sheet">
+        	<div class="search-container">
+                <div class="search-container_lower-row" id="quickfilter-container_default">
+                    <button class="quick-filter_all" id="quick-filter_all">
+                        <img src="icons/close.png">
+                       All
+                    </button>
+                    <button class="quick-filter_button" id="quick-filter_people">
+                        <img src="icons/checked.png">
+                        People
+                    </button>
+                    <button class="quick-filter_button" id="quick-filter_page">
+                        <img src="icons/checked.png">
+                        Genesys Cloud Pages
+                    </button>
+                </div>
+                <div class="advanced-filter_container" id="quickfilter-container_active">
+                    <div class="advanced-filter_container-header">
+                        <h3 class="help-subtitle_text">Filters</h3>
+                        <img src="icons/sm-close.png" class="close-filter_icon" id="close-filter">
+                    </div>
+                    <div class="search-container_lower-row">
+                        <div class="filter-placeholder_container">
+                            <h3 class="filter-placeholder_text">Placeholder for possible filters</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-divider"></div>
+            <div class="dynamic-content_block" id="dynamic-content_block">
+                <div class="content-body" id="content-container">
+                    <h3 class="content-subtitle_text">Recent</h3>
+                    <div class="inline-row">
+                        <div class="inline-row_nested">
+                            <img class="sm-avatar" src="images/image1.png">
+                            <div class="inline-text_container">
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">Sam Limby</h4>
+                                    <div class="inline-divider"></div>
+                                    <div class="inline-activity_bar">
+                                        <div class="inactive-circle"></div>
+                                        <p class="inline-footnote_text">
+                                            Last signed in: 3 hours ago
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lower_inline-text_container">
+                                    <p class="inline-footnote_text">Accessed: 4 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-action">
+                            <div class="quick-action-nested">
+                                <img class="chat-icon" src="icons/chat.png">
+                            </div>
+                        </div>
+                        <img src="icons/open.png">
+                    </div>
+                    <div class="inline-row">
+                        <div class="inline-row_nested">
+                            <img class="sm-avatar" src="images/female-image5.png">
+                            <div class="inline-text_container">
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">Jane Doe</h4>
+                                    <div class="inline-divider"></div>
+                                    <div class="inline-activity_bar">
+                                        <div class="active-circle"></div>
+                                        <p class="inline-footnote_text">
+                                            Active
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lower_inline-text_container">
+                                    <p class="inline-footnote_text">Accessed: 5 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-action">
+                            <div class="quick-action-nested">
+                                <img class="chat-icon" src="icons/chat.png">
+                            </div>
+                        </div>
+                        <img src="icons/open.png">
+                    </div>
+                    <div class="inline-row">
+                        <div class="inline-row_nested">
+                            <img class="sm-avatar" src="images/icon-avatar.png">
+                            <div class="inline-text_container">
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">Roles & Permissions</h4>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">
+                                        People & Permissions > Roles/Permissions
+                                    </p>
+                                </div>
+                                <div class="lower_inline-text_container">
+                                    <p class="inline-footnote_text">Accessed: 5 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="icons/open.png">
+                    </div>
+                    <div class="inline-row">
+                        <div class="inline-row_nested">
+                            <img class="sm-avatar" src="images/placeholder.png">
+                            <div class="inline-text_container">
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">test group</h4>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">
+                                        Group members: 45 users
+                                    </p>
+                                </div>
+                                <div class="lower_inline-text_container">
+                                    <p class="inline-footnote_text">Accessed: 6 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="icons/open.png">
+                    </div>
+                    <div class="inline-row">
+                        <div class="inline-row_nested">
+                            <img class="sm-avatar" src="images/icon-avatar.png">
+                            <div class="inline-text_container">
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">Operational Console</h4>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">
+                                        Troubleshooting > Operational Console
+                                    </p>
+                                </div>
+                                <div class="lower_inline-text_container">
+                                    <p class="inline-footnote_text">Accessed: 2 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="icons/open.png">
+                    </div>
+                    <div class="inline-row">
+                        <div class="inline-row_nested">
+                            <img class="sm-avatar" src="images/icon-avatar.png">
+                            <div class="inline-text_container">
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">People</h4>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">
+                                        People & Permissions > People
+                                    </p>
+                                </div>
+                                <div class="lower_inline-text_container">
+                                    <p class="inline-footnote_text">Accessed: 2 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="icons/open.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+  	</div>
+</body>
+</html>
