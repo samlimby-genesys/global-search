@@ -77,7 +77,9 @@ document.addEventListener("DOMContentLoaded", function() {
         peopleContainer.innerHTML = `
             <div class="content-container_subtitle-row">
                 <img src="icons/user-icon.png">
-                <h3 class="content-subtitle_text">People</h3>
+                <h3 class="content-subtitle_text">Directory</h3>
+                <div class="content-header_line"></div>
+                <img src="icons/kebab-menu.png">
             </div>
         `;
         peopleContainer.classList.add("content-section");
@@ -85,7 +87,9 @@ document.addEventListener("DOMContentLoaded", function() {
         pageContainer.innerHTML = `
             <div class="content-container_subtitle-row">
                 <img src="icons/page-icon.png">
-                <h3 class="content-subtitle_text">Genesys Cloud Pages</h3>
+                <h3 class="content-subtitle_text">Pages</h3>
+                <div class="content-header_line"></div>
+                <img src="icons/kebab-menu.png">
             </div>
         `;
         pageContainer.classList.add("content-section");
@@ -137,7 +141,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 innerHTMLContent += `
                                 </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-footnote_text">${result.result_subtitle}</p>
+                                    <p class="inline-body_text">${result.role}</p>
+                                    <div class="inline-divider"></div>
+                                    <p class="inline-footnote_text">${result.team}</p>
                                 </div>
                             </div>
                         </div>

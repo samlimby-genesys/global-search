@@ -988,7 +988,9 @@
         "chat_quick-action": true,
         "favourite_quick-action": false,
         "image": "men-image2.png",
-        "category": "people"
+        "category": "people",
+        "role": "User Experience Designer",
+        "team": "AI & Automation"
     },
     {
         "result_title": "Abigail Harris",
@@ -1204,6 +1206,8 @@
         "chat_quick-action": true,
         "favourite_quick-action": true,
         "image": "image1.png",
-        "category": "people"
+        "category": "people",
+        "role": "Product Designer",
+        "team": "Common Experiences UX (Global Search Designer)"
     }
 ]
