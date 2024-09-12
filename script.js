@@ -37,12 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function filterAndDisplayResults() {
         const query = searchInput.value.toLowerCase().trim();
+        const searchTitleKeyWord = document.querySelectorAll("inline-title_text");
         console.log(query.length);
 
         if (query.length === 0) {
             frameContainer.innerHTML = originalContent;
             return;
-        } else if (query.length === 2) {
+        } else if (query.length >= 2) {
             // checking if help section already existings
             let existingHelpBlock = document.getElementById("search-help_block");
             if (!existingHelpBlock) {
@@ -122,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <div class="inline-row_nested">
                                 <div class="inline-text_container">
                                     <div class="upper_inline-text_container">
-                                        <h4 class="inline-title_text">${result.result_title}</h4>
+                                        <h4 id="search-keyword" class="inline-title_text">${result.result_title}</h4>
                     `;
 
                     // Adding status to just people
@@ -141,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     innerHTMLContent += `
                                     </div>
                                     <div class="lower_inline-text_container">
-                                        <p class="inline-body_text">${result.role}</p>
+                                        <p id="search-keyword" class="inline-body_text">${result.role}</p>
                                         <div class="inline-divider"></div>
                                         <p class="inline-footnote_text">${result.team}</p>
                                     </div>
@@ -185,6 +186,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let helpTextElement = document.getElementById("help-text_block");
             helpTextElement.innerHTML = `<p id="help-text_block" class="help-body_text">23 related articles to “${searchInput.value}” found in help. Click to explore.</p>`
+        };
+
+        function highlightMatches(query) {
+            const regex = new RegExp(`(${query})`, "gi");
+
+            searchTitleKeyWord.forEach((searchTitleKeyWord) => {
+                const originalText = searchTitleKeyWord.textContent;
+                searchTitleKeyWord.innerHTML = originalText;
+                searchTitleKeyWord.innerHTML = originalContent.replace(regex, `<span class="input-highlight">${query}</span>`);
+            });
+        };
+
+        function clearHighlights() {
+            searchTitleKeyWord.forEach((searchTitleKeyWord) => {
+                searchTitleKeyWord.innerHTML = originalText;
+            });
         };
 
     };
