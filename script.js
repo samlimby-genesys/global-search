@@ -80,17 +80,17 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="icons/user-icon.png">
                     <h3 class="content-subtitle_text">Directory</h3>
                     <div class="content-header_line"></div>
-                    <img src="icons/kebab-menu.png">
+                    <img class="kebab-icon" id="people-kebab" src="icons/kebab-menu.png">
                 </div>
             `;
             peopleContainer.classList.add("content-section");
 
             pageContainer.innerHTML = `
-                <div class="content-container_subtitle-row">
+                <div id="page-header_element" class="content-container_subtitle-row">
                     <img src="icons/page-icon.png">
                     <h3 class="content-subtitle_text">Pages</h3>
                     <div class="content-header_line"></div>
-                    <img src="icons/kebab-menu.png">
+                    <img class="kebab-icon" id="page-kebab" src="icons/kebab-menu.png">
                 </div>
             `;
             pageContainer.classList.add("content-section");
@@ -116,6 +116,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     if (result.category === "page") {
                         inlineRow.setAttribute("id", "page-inlineRow");
+                        innerHTMLContent += `
+                            <img class="sm-avatar" src="images/icon-avatar.png">
+                        `;
                     };
                     
                     // Updated HTML structure to include title, description and image
@@ -148,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function() {
                                     </div>
                                 </div>
                             </div>
-                            <img src="icons/open.png">
                         </div>
                     `;
 
@@ -186,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let helpTextElement = document.getElementById("help-text_block");
             helpTextElement.innerHTML = `<p id="help-text_block" class="help-body_text">23 related articles to “${searchInput.value}” found in help. Click to explore.</p>`
+            return;
         };
 
         function highlightMatches(query) {
@@ -204,7 +207,40 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         };
 
+
     };
+
+    function create(event) {
+
+        if (event.target.click && event.target.matches("#page-kebab")) {
+            console.log("kebab1 called")
+            document.getElementById("page-kebab")?.remove()
+
+            let pageKebabContainer = document.createElement("div");
+            pageKebabContainer.classList.add("kebab-container");
+            pageKebabContainer.innerHTML = `
+                <img class="kebab-icon" id="page-kebab" src="icons/kebab-menu.png">
+                <div class="kebab-option_menu">
+                    <p class="kebab-option_text">Edit Search Categories</p>
+                </div>
+            `;
+            let pageKebab = document.createElement("div");
+            pageKebab.id = "page-kebab";
+            pageKebab.textContent = "example text"
+            document.getElementById("page-header_element").appendChild(pageKebabContainer);
+        }
+    };
+
+    document.body.addEventListener("click", function(){
+        const pageKebabMenu = document.querySelectorAll(".kebab-option_menu");
+        console.log("clicked")
+        if (pageKebabMenu.length > 1) {
+            pageKebabMenu.forEach(menu => menu.remove());
+        }
+    });
+
+
+    frameContainer.addEventListener("click", create);
 
     //search filter experience
     const searchFilter = document.getElementById("search-filter_button");
@@ -236,7 +272,6 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     })
 
-    
 
     //back page navigation
     document.addEventListener("keydown", function(event){

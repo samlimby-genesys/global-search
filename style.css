@@ -176,7 +176,7 @@
     overflow: scroll; 
     flex-direction: column;
     gap: 24px;
-    margin-top: 8px;
+    margin-top: 4px;
 
 }
 
@@ -207,10 +207,10 @@
 
 .content-section {
     display: flex;
-    height: 263px;
+    height: auto;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     align-self: stretch;
     overflow: hidden;
 }
@@ -222,8 +222,55 @@
     align-self: stretch;
 }
 
+.kebab-icon {
+    cursor: pointer;
+}
+
+.kebab-container {
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.kebab-option_menu {
+    position: absolute;
+    right: 16px;
+    top: 24px;
+    display: flex;
+    width: 160px;
+    padding: 16px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--menu-border_radius, 4px);
+    border: 1px solid var(--color-cornflower-300, #C6C8CE);
+    background: var(--menu-background_color, #FFF);
+
+    /* ❌[DEPRECATED]/elevation/small 10 */
+    box-shadow: 0px 2px 4px 1px rgba(35, 57, 92, 0.10);
+}
+
+.kebab-option_text {
+    display: flex;
+    height: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    overflow: hidden;
+    color: var(--menu-option-label-foreground_color, #1B2C48);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Noto Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+}
 
 /* Search Field - Side Sheet */
+
+.input-highlight {
+    background: rgba(163, 167, 176, 0.32);
+}
 
 .search-field {
     display: flex;
