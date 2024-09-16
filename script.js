@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // containers for different categories & help below
             peopleContainer.innerHTML = `
-                <div class="content-container_subtitle-row">
+                <div id="page-header_element1" class="content-container_subtitle-row">
                     <img src="icons/user-icon.png">
                     <h3 class="content-subtitle_text">Directory</h3>
                     <div class="content-header_line"></div>
@@ -210,37 +210,88 @@ document.addEventListener("DOMContentLoaded", function() {
 
     };
 
-    function create(event) {
+    const existingKebabIcon = document.querySelector("#kebab-icon")
+
+    console.log(existingKebabIcon)
+
+    function createPage(event) {
 
         if (event.target.click && event.target.matches("#page-kebab")) {
             console.log("kebab1 called")
-            document.getElementById("page-kebab")?.remove()
+            const existingKebab = document.querySelector(".kebab-container");
+
+            if (existingKebab) {
+                existingKebab.remove();
+                return;
+            }
 
             let pageKebabContainer = document.createElement("div");
             pageKebabContainer.classList.add("kebab-container");
             pageKebabContainer.innerHTML = `
-                <img class="kebab-icon" id="page-kebab" src="icons/kebab-menu.png">
                 <div class="kebab-option_menu">
                     <p class="kebab-option_text">Edit Search Categories</p>
                 </div>
             `;
-            let pageKebab = document.createElement("div");
-            pageKebab.id = "page-kebab";
-            pageKebab.textContent = "example text"
             document.getElementById("page-header_element").appendChild(pageKebabContainer);
+            } else {
+            const existingKebabContainer = document.querySelector(".kebab-container");
+            if (existingKebabContainer && !event.target.closest(".kebab-container")) {
+                existingKebabContainer.remove()
+            }
+        }
+
+        if (existingKebabIcon > 2) {
+            existingKebabIcon[2].remove();
         }
     };
 
+    function createPeople(event) {
+
+        if (event.target.click && event.target.matches("#people-kebab")) {
+            console.log("kebab2 called")
+            const existingKebab = document.querySelector(".kebab-container1");
+
+            if (existingKebab) {
+                existingKebab.remove();
+                return;
+            }
+
+            let peopleKebabContainer = document.createElement("div");
+            peopleKebabContainer.classList.add("kebab-container");
+            peopleKebabContainer.innerHTML = `
+                <div class="kebab-option_menu">
+                    <p class="kebab-option_text">Edit Search Categories</p>
+                </div>
+            `;
+            document.getElementById("page-header_element1").appendChild(peopleKebabContainer);
+            } else {
+            const existingKebabContainer = document.querySelector(".kebab-container1");
+            if (existingKebabContainer && !event.target.closest(".kebab-container1")) {
+                existingKebabContainer.remove()
+            }
+        }
+
+        if (existingKebabIcon > 2) {
+            existingKebabIcon[2].remove();
+        }
+    };
+
+
     document.body.addEventListener("click", function(){
-        const pageKebabMenu = document.querySelectorAll(".kebab-option_menu");
-        console.log("clicked")
+        const peopleKebabMenu = document.querySelectorAll(".kebab-container1"); 
+        if (peopleKebabMenu.length > 1) {
+            peopleKebabMenu.remove();
+        }
+
+        const pageKebabMenu = document.querySelectorAll(".kebab-container"); 
         if (pageKebabMenu.length > 1) {
-            pageKebabMenu.forEach(menu => menu.remove());
+            pageKebabMenu.remove();
         }
     });
 
 
-    frameContainer.addEventListener("click", create);
+    frameContainer.addEventListener("click", createPage);
+    frameContainer.addEventListener("click", createPeople);
 
     //search filter experience
     const searchFilter = document.getElementById("search-filter_button");

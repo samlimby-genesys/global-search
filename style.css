@@ -244,9 +244,11 @@
     border-radius: var(--menu-border_radius, 4px);
     border: 1px solid var(--color-cornflower-300, #C6C8CE);
     background: var(--menu-background_color, #FFF);
-
-    /* ❌[DEPRECATED]/elevation/small 10 */
     box-shadow: 0px 2px 4px 1px rgba(35, 57, 92, 0.10);
+}
+
+.kebab-option_menu:hover {
+    background: var(--menu-option-hover-background_color, #EFF0FE);
 }
 
 .kebab-option_text {
