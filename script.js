@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
             searchData = data;
             // Attach event listeners after the data is loaded
             searchInput.addEventListener('input', function(){
-                filterAndDisplayResults() 
+                filterAndDisplayResults()
             });
         })
         .catch(error => {
@@ -350,6 +350,23 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
+        if (inlineRow) {
+            inlineRow.addEventListener("mouseover", function(){
+                inlineRow.classList.replace("inline-row", "inline-row-hover");
+                const inlineRowArrow = document.createElement("img");
+                inlineRowArrow.innerHTML = `
+                    <img id="inline-arrow" src="icons/open.png">
+                `;
+                inlineRow.appendChild(inlineRowArrow);
+            });
+    
+            inlineRow.addEventListener("mouseout", function(){
+                inlineRow.classList.replace("inline-row-hover", "inline-row");
+                const inlineRowArrow = document.querySelector("#inline-arrow");
+                inlineRowArrow.remove()
+            });
+        }
+
         if (existingKebabIcon > 2) {
             existingKebabIcon[2].remove();
         }
@@ -599,4 +616,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     updateRowCounts()
+
+
 });
