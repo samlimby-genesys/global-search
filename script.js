@@ -12,15 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     peopleContainer.setAttribute("id", "people-container");
     const pageContainer = document.createElement("div");
     pageContainer.setAttribute("id", "page-container");
-    
-    // filter const
-    let allQuickFilter = document.getElementById("quick-filter_all");
-    let allQuickFilterCount = 1;
-    
-    let peopleQuickFilter = document.getElementById("quick-filter_people");
-    let peopleQuickFilterCount = 1;
-    let pageQuickFilter = document.getElementById("quick-filter_page");
-    let pageQuickFilterCount = 1;
 
 
     // Fetch the JSON data
@@ -29,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             searchData = data;
             // Attach event listeners after the data is loaded
-            searchInput.addEventListener('input', filterAndDisplayResults);
+            searchInput.addEventListener('input', function(){
+                filterAndDisplayResults() 
+            });
         })
         .catch(error => {
             console.error('Error fetching the search data:', error);
@@ -90,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="icons/page-icon.png">
                     <h3 class="content-subtitle_text">Pages</h3>
                     <div class="content-header_line"></div>
+                    <button class="view-more_button">View all</button>
                 </div>
             `;
             pageContainer.classList.add("content-section");
@@ -106,16 +100,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     // specifying id and adding image to just people
                     if (result.category === "people") {
+                        console.log(result.image)
                         inlineRow.setAttribute("id", "people-inlineRow");
                         innerHTMLContent += `
-                            <img class='sm-avatar' src="images/${result.image}"
+                            <div class="avatar-container">
+                                <img class="avatar-image_active" src="images/${result.image}"></img>
+                                <div class="avatar-ring_gap"></div>
+                            </div>
                         `;
                     };
 
                     if (result.category === "page") {
                         inlineRow.setAttribute("id", "page-inlineRow");
                         innerHTMLContent += `
-                            <img class="sm-avatar" src="images/icon-avatar.png">
+                            <img class="page-category_avatar" src="images/icon-avatar.png">
                         `;
                     };
                     
@@ -130,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Adding status to just people
                     if (result.category === "people") {
                         innerHTMLContent += `
-                            <div class="inline-divider"></div>
                             <div class="inline-activity_bar">
                                 <div class="active-circle"></div>
                                 <p class="inline-footnote_text">
@@ -140,16 +137,33 @@ document.addEventListener("DOMContentLoaded", function() {
                         `;
                     };
 
-                    innerHTMLContent += `
+                    // specifying the description by people or page
+                    if (result.category === "people") {
+                        innerHTMLContent += `
                                     </div>
                                     <div class="lower_inline-text_container">
-                                        <p id="search-keyword" class="inline-body_text">${result.role}</p>
+                                        <p id="search-keyword" class="primary-inline-body_text">${result.role}</p>
                                         <div class="inline-divider"></div>
-                                        <p class="inline-footnote_text">${result.team}</p>
+                                        <p class="secondary-inline-body_text">${result.team}</p>
                                     </div>
                                 </div>
                             </div>
-                    `;
+                        `;
+                    }
+
+
+                    // specifying the description by people or page
+                    if (result.category === "page") {
+                        innerHTMLContent += `
+                                    </div>
+                                    <div class="lower_inline-text_container">
+                                        <p id="search-keyword" class="primary-inline-body_text">${result.result_subtitle}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+
 
                     inlineRow.innerHTML = innerHTMLContent;
 
@@ -185,25 +199,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let helpTextElement = document.getElementById("help-text_block");
             helpTextElement.innerHTML = `<p id="help-text_block" class="help-body_text">23 related articles to “${searchInput.value}” found in help. Click to explore.</p>`
+            updateRowCounts()
             return;
         };
-
-        function highlightMatches(query) {
-            const regex = new RegExp(`(${query})`, "gi");
-
-            searchTitleKeyWord.forEach((searchTitleKeyWord) => {
-                const originalText = searchTitleKeyWord.textContent;
-                searchTitleKeyWord.innerHTML = originalText;
-                searchTitleKeyWord.innerHTML = originalContent.replace(regex, `<span class="input-highlight">${query}</span>`);
-            });
-        };
-
-        function clearHighlights() {
-            searchTitleKeyWord.forEach((searchTitleKeyWord) => {
-                searchTitleKeyWord.innerHTML = originalText;
-            });
-        };
-
 
     };
 
@@ -471,92 +469,104 @@ document.addEventListener("DOMContentLoaded", function() {
         frameContainer.innerHTML = originalContent;
     });
 
-    // quick filter actions
+    // filter const
+    let allQuickFilter = document.getElementById("quick-filter_all");
+    let allQuickFilterCount = 0;
+    let peopleQuickFilter = document.getElementById("quick-filter_people");
+    let peopleQuickFilterCount = 0;
+    let pageQuickFilter = document.getElementById("quick-filter_page");
+    let pageQuickFilterCount = 0;
 
+    // quick filter actions
     allQuickFilter.addEventListener("click", function() {
-        console.log("all filter is pressed!")
-        allFilter();
+        allQuickFilterCount = 1;
+        quickFilterLogic()
+        filterCheck()
     });
 
     peopleQuickFilter.addEventListener("click", function() {
-        console.log("people filter is pressed")
-        peopleFilter();
+        peopleQuickFilterCount = 1;
+        pageQuickFilterCount = 0;
+        allQuickFilterCount = 0;
+        quickFilterLogic()
+        filterCheck()
     });
 
     pageQuickFilter.addEventListener("click", function() {
-        console.log("page filter is pressed");
-        pageFilter();
+        pageQuickFilterCount = 1;
+        peopleQuickFilterCount = 0;
+        allQuickFilterCount = 0;
+        quickFilterLogic()
+        filterCheck()
     });
 
-    //quick filter functions
-
-    function allFilter() {
+    function quickFilterLogic() {
+        console.log("filter flow actioned")
+        filterCheck()
+        //quick filter conditions
         if (allQuickFilterCount === 1) {
-            allQuickFilter.innerHTML = `
-                    <img src="icons/plus.png">
-                    Top results
-            `;
+
+            allQuickFilter.classList.replace("quick-filter_button", "quick-filter_button-active");
+
+            peopleQuickFilterCount = 0;
+            peopleQuickFilter.classList.replace("quick-filter_button-active", "quick-filter_button");
+
+            pageQuickFilterCount = 0;
+            pageQuickFilter.classList.replace("quick-filter_button-active", "quick-filter_button");
+
+            if (pageContainer) {
+                pageContainer.style.display = ""
+            }
+
+            if (peopleContainer) {
+                peopleContainer.style.display = ""
+            }
+
+        } else if (peopleQuickFilterCount === 1) {
+
             allQuickFilterCount = 0;
-            allQuickFilter.classList.replace("quick-filter_all", "quick-filter_all-active")
-            peopleQuickFilterCount = 1;
-            pageQuickFilterCount = 1;
-            peopleFilter()
-            pageFilter()
-        } else {
-            allQuickFilter.innerHTML = `
-                    <img src="icons/close.png">
-                    Top results
-            `;
-            allQuickFilterCount = 1;
-            peopleQuickFilterCount = 0;
+            allQuickFilter.classList.replace("quick-filter_button-active", "quick-filter_button");
+
             pageQuickFilterCount = 0;
-            peopleFilter()
-            pageFilter()
-            allQuickFilter.classList.replace("quick-filter_all-active", "quick-filter_all")
-            console.log(allQuickFilterCount)
-        };
+            pageQuickFilter.classList.replace("quick-filter_button-active", "quick-filter_button");
 
-    };
+            if (pageContainer) {
+                pageContainer.style.display = "none"
+            }
 
+            if (peopleContainer) {
+                peopleContainer.style.display = ""
+            }
 
-    function peopleFilter() {
-        console.log("people invoked")
-        if (peopleQuickFilterCount === 1) {
-            peopleQuickFilter.innerHTML = `
-                    <img src="icons/unchecked.png">
-                    People
-            `
+            peopleQuickFilter.classList.replace("quick-filter_button", "quick-filter_button-active");
+
+        } else if (pageQuickFilterCount === 1) {
+
+            allQuickFilterCount = 0;
+            allQuickFilter.classList.replace("quick-filter_button-active", "quick-filter_button");
+
             peopleQuickFilterCount = 0;
-            document.getElementById("people-container").style.display = "none";
-        } else {
-            peopleQuickFilter.innerHTML = `
-    
-                    People
-            `
-            peopleQuickFilterCount = 1;
-            document.getElementById("people-container").style.display = "";
-        };
-    };
-    
+            peopleQuickFilter.classList.replace("quick-filter_button-active", "quick-filter_button");
 
-    function pageFilter() {
-        console.log("page invoked")
-        if (pageQuickFilterCount === 1) {
-            pageQuickFilter.innerHTML = `
-                    <img src="icons/unchecked.png">
-                    Genesys Cloud Page
-            `
-            pageQuickFilterCount = 0;
-            document.getElementById("page-container").style.display = "none";
-        } else {
-            pageQuickFilter.innerHTML = `
-    
-                    Genesys Cloud Page
-            `
-            pageQuickFilterCount = 1;
-            document.getElementById("page-container").style.display = "";
-        };
+            if (pageContainer) {
+                pageContainer.style.display = ""
+            }
+
+            if (peopleContainer) {
+                peopleContainer.style.display = "none"
+            }
+
+            pageQuickFilter.classList.replace("quick-filter_button", "quick-filter_button-active");
+        }
+        return
     };
+
+    function filterCheck() {
+        console.log(allQuickFilterCount)
+        console.log(peopleQuickFilterCount)
+        console.log(pageQuickFilterCount)
+    }
+
 
     function updateRowCounts() {
         const pageRows = pageContainer.querySelectorAll('[id^="page-inlineRow"]');
@@ -567,19 +577,25 @@ document.addEventListener("DOMContentLoaded", function() {
         if (pageHeader) {
             pageHeader.innerHTML = `
                 <img src="icons/page-icon.png">
-                <h3 class="content-subtitle_text">replaced</h3>
+                <h3 class="content-subtitle_text">Pages (${pageCount})</h3>
                 <div class="content-header_line"></div>
+                <button class="view-more_button">View all</button>
             `;
         }
 
         const peopleRows = peopleContainer.querySelectorAll('[id^="people-inlineRow"]');
         const peopleCount = peopleRows.length;
 
-        const totalCount = peopleRows.length + pageRows.length;
+        let peopleHeader = document.querySelector("#page-header_element1");
 
-        document.getElementById("quick-filter_all").innerHTML = `
-            Top results 
-        `;
+        if (peopleHeader) {
+            peopleHeader.innerHTML = `
+                <img src="icons/user-icon.png">
+                <h3 class="content-subtitle_text">Directory (${peopleCount})</h3>
+                <div class="content-header_line"></div>
+                <button class="view-more_button">View all</button>
+            `;
+        }
     };
 
     updateRowCounts()
