@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             peopleContainer.innerHTML = `
                 <div id="page-header_element1" class="content-container_subtitle-row">
                     <img src="icons/user-icon.png">
-                    <h3 class="content-subtitle_text">Directory</h3>
+                    <h3 id="directory-title" class="content-subtitle_text">Directory</h3>
                     <div class="content-header_line"></div>
                     <img class="kebab-icon" id="people-kebab" src="icons/kebab-menu.png">
                 </div>
@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="icons/page-icon.png">
                     <h3 class="content-subtitle_text">Pages</h3>
                     <div class="content-header_line"></div>
-                    <img class="kebab-icon" id="page-kebab" src="icons/kebab-menu.png">
                 </div>
             `;
             pageContainer.classList.add("content-section");
@@ -103,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     frameContainer.classList.add('dynamic-content_block');
 
                     let innerHTMLContent = `
-                        <div class="inline-row">
                     `;
 
                     // specifying id and adding image to just people
@@ -151,14 +149,13 @@ document.addEventListener("DOMContentLoaded", function() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     `;
 
                     inlineRow.innerHTML = innerHTMLContent;
 
                     allQuickFilter.innerHTML = `
-                        <img src="icons/checked.png">
-                        All
+        
+                        Top results
                     `;
 
                     if (result.category === "people") {
@@ -210,9 +207,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     };
 
+    // kebab menu selection
     const existingKebabIcon = document.querySelector("#kebab-icon")
-
-    console.log(existingKebabIcon)
 
     function createPage(event) {
 
@@ -228,11 +224,58 @@ document.addEventListener("DOMContentLoaded", function() {
             let pageKebabContainer = document.createElement("div");
             pageKebabContainer.classList.add("kebab-container");
             pageKebabContainer.innerHTML = `
-                <div class="kebab-option_menu">
+                <div id="page_kebab-option" class="kebab-option_menu">
                     <p class="kebab-option_text">Edit Search Categories</p>
                 </div>
             `;
             document.getElementById("page-header_element").appendChild(pageKebabContainer);
+
+            const pageKebabOption = document.querySelector("#page_kebab-option");
+
+            if (pageKebabOption) {
+                pageKebabOption.addEventListener("click", function() {
+                    let peopleContainer = document.querySelector("#people-container");
+                    let pageContainer = document.querySelector("#page-container");
+                    let searchDropdownBody = document.querySelector("#dynamic-content_block")
+                    if (pageContainer) {
+                        pageContainer.classList.replace("content-section", "customize_content-section");
+                        pageContainer.innerHTML = `
+                            <div id="page-header_element-active" class="content-container_subtitle-row">
+                                <img src="icons/drag-icon.png">
+                                <div class="upper_inline-text_container">
+                                    <img src="icons/page-icon.png">
+                                    <h3 class="content-subtitle_text">Page</h3>
+                                </div>
+                            </div>
+                        `;
+                    };
+                    if (peopleContainer) {
+                        peopleContainer.classList.replace("content-section", "customize_content-section");
+                        peopleContainer.innerHTML = `
+                            <div id="page-header_element-active" class="content-container_subtitle-row">
+                                <img src="icons/drag-icon.png">
+                                <div class="upper_inline-text_container">
+                                    <img src="icons/user-icon.png">
+                                    <h3 class="content-subtitle_text">Directory</h3>
+                                </div>
+                            </div>
+                        `;
+                    };
+                    if (searchDropdownBody) {
+                        searchDropdownBody.classList.replace("dynamic-content_block", "dynamic-content_block-customize")
+                        searchDropdownBody.innerHTML = `
+                            <div id="rearrange-categories_header" class="content-container_subtitle-row">
+                                <h3 class="content-subtitle_text">Rearrange Categories</h3>
+                                <div class="content-header_line"></div>
+                                <img class="kebab-icon" id="people-kebab" src="icons/kebab-menu.png">
+                            </div>
+                            ${pageContainer.outerHTML}
+                            ${peopleContainer.outerHTML}
+                        `; 
+                    }
+                });
+            }
+
             } else {
             const existingKebabContainer = document.querySelector(".kebab-container");
             if (existingKebabContainer && !event.target.closest(".kebab-container")) {
@@ -247,6 +290,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function createPeople(event) {
 
+        
+
         if (event.target.click && event.target.matches("#people-kebab")) {
             console.log("kebab2 called")
             const existingKebab = document.querySelector(".kebab-container1");
@@ -259,12 +304,48 @@ document.addEventListener("DOMContentLoaded", function() {
             let peopleKebabContainer = document.createElement("div");
             peopleKebabContainer.classList.add("kebab-container");
             peopleKebabContainer.innerHTML = `
-                <div class="kebab-option_menu">
-                    <p class="kebab-option_text">Edit Search Categories</p>
+                <div id="people_kebab-option" class="kebab-option_menu">
+                    <p class="kebab-option_text">Rearrange Categories</p>
                 </div>
             `;
+
             document.getElementById("page-header_element1").appendChild(peopleKebabContainer);
-            } else {
+
+            const peopleKebabOption = document.querySelector("#people_kebab-option");
+
+            if (peopleKebabOption) {
+                console.log(peopleContainer)
+                peopleKebabOption.addEventListener("click", function(){
+                    let peopleContainer = document.querySelector("#people-container");
+                    let pageContainer = document.querySelector("#page-container");
+                    if (pageContainer) {
+                        pageContainer.classList.replace("content-section", "customize_content-section");
+                        pageContainer.innerHTML = `
+                            <div id="page-header_element-active" class="content-container_subtitle-row" draggable="true">
+                                <img src="icons/drag-icon.png">
+                                <div class="upper_inline-text_container">
+                                    <img src="icons/page-icon.png">
+                                    <h3 class="content-subtitle_text">Page</h3>
+                                </div>
+                            </div>
+                        `;
+                    };
+                    if (peopleContainer) {
+                        peopleContainer.classList.replace("content-section", "customize_content-section");
+                        peopleContainer.innerHTML = `
+                            <div id="page-header_element-active" class="content-container_subtitle-row">
+                                <img src="icons/drag-icon.png">
+                                <div class="upper_inline-text_container">
+                                    <img src="icons/user-icon.png">
+                                    <h3 class="content-subtitle_text">Directory</h3>
+                                </div>
+                            </div>
+                        `;
+                    };
+                });
+            }
+
+        } else {
             const existingKebabContainer = document.querySelector(".kebab-container1");
             if (existingKebabContainer && !event.target.closest(".kebab-container1")) {
                 existingKebabContainer.remove()
@@ -275,6 +356,51 @@ document.addEventListener("DOMContentLoaded", function() {
             existingKebabIcon[2].remove();
         }
     };
+
+    document.addEventListener("click", function(event){
+        let customizeConfirmation = event.target.closest(".customize_confirmation");
+        console.log(customizeConfirmation)
+
+        if (customizeConfirmation) {
+            filterAndDisplayResults()
+            peopleContainer.classList.replace("customize_content-section", "content-section");
+            pageContainer.classList.replace("customize_content-section", "content-section");
+        }
+    })
+
+    function initializeDragAndDrop() {
+        const draggableItems = document.querySelectorAll(".customize_content-section");
+
+        draggableItems.forEach((item) => {
+            item.addEventListener("dragstart", handleDragStart);
+            item.addEventListener("dragover", handleDragOver);
+            item.addEventListener("drop", handleDrop);
+        }); 
+    }
+
+    function handleDragStart(event) {
+        event.dataTransfer.setData("text/plain", event.target.id);
+        event.dropEffect = "move";
+    }
+
+    function handleDragOver(event) {
+        event.preventDefault();
+        event.dataTransfer.dropEffect = "move";
+    }
+
+    function handleDrop(event) {
+        event.preventDefault();
+        
+        const draggedItemId = event.dataTransfer.getData("text/plain");
+        const draggedItem = document.getElementById(draggedItemId);
+        const dropTarget = event.target.closest(".content-container_subtitle-row");
+
+        if (draggedItem && dropTarget && draggedItem !== dropTarget) {
+            const parent = dropTarget.parentNode;
+            parent.insertBefore(draggedItem, dropTarget);
+            parent.insertBefore(dropTarget, draggedItem.nextSibling);
+        }
+    }
 
 
     document.body.addEventListener("click", function(){
@@ -292,6 +418,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     frameContainer.addEventListener("click", createPage);
     frameContainer.addEventListener("click", createPeople);
+
+    // category drag and drop selection
+
+    function drag(event) {
+        event.dataTransfer.setData("text", )
+    }
+
+
 
     //search filter experience
     const searchFilter = document.getElementById("search-filter_button");
@@ -360,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (allQuickFilterCount === 1) {
             allQuickFilter.innerHTML = `
                     <img src="icons/plus.png">
-                    All
+                    Top results
             `;
             allQuickFilterCount = 0;
             allQuickFilter.classList.replace("quick-filter_all", "quick-filter_all-active")
@@ -371,7 +505,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             allQuickFilter.innerHTML = `
                     <img src="icons/close.png">
-                    All
+                    Top results
             `;
             allQuickFilterCount = 1;
             peopleQuickFilterCount = 0;
@@ -396,7 +530,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("people-container").style.display = "none";
         } else {
             peopleQuickFilter.innerHTML = `
-                    <img src="icons/checked.png">
+    
                     People
             `
             peopleQuickFilterCount = 1;
@@ -416,7 +550,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("page-container").style.display = "none";
         } else {
             pageQuickFilter.innerHTML = `
-                    <img src="icons/checked.png">
+    
                     Genesys Cloud Page
             `
             pageQuickFilterCount = 1;
@@ -428,47 +562,25 @@ document.addEventListener("DOMContentLoaded", function() {
         const pageRows = pageContainer.querySelectorAll('[id^="page-inlineRow"]');
         const pageCount = pageRows.length;
 
-        document.getElementById("quick-filter_page").innerHTML = `
-            <img src="icons/checked.png">
-            Pages 
-            (${pageCount})
-        `;
+        let pageHeader = document.querySelector("#page-header_element");
+
+        if (pageHeader) {
+            pageHeader.innerHTML = `
+                <img src="icons/page-icon.png">
+                <h3 class="content-subtitle_text">replaced</h3>
+                <div class="content-header_line"></div>
+            `;
+        }
 
         const peopleRows = peopleContainer.querySelectorAll('[id^="people-inlineRow"]');
         const peopleCount = peopleRows.length;
 
-        document.getElementById("quick-filter_people").innerHTML = `
-            <img src="icons/checked.png">
-            Directory 
-            (${peopleCount})
-        `;
-
         const totalCount = peopleRows.length + pageRows.length;
 
         document.getElementById("quick-filter_all").innerHTML = `
-            <img src="icons/checked.png">
-            All 
-            (${totalCount})
+            Top results 
         `;
     };
 
     updateRowCounts()
-
-    // Observer for DOM changes
-    const observerConfig = { childList: true, subtree: true }; 
-    const pageObserver = new MutationObserver(updateRowCounts);
-    const peopleObserver = new MutationObserver(updateRowCounts);
-
-    console.log(document.getElementById("page-container")); 
-    if (pageContainer) {
-        pageObserver.observe(pageContainer, observerConfig);
-    } else {
-        console.error("Element does not have the right id attached")
-    }
-
-    if (peopleContainer) {
-        peopleObserver.observe(peopleContainer, observerConfig);
-    } else {
-        console.error("not able to get this element - what's going on!?!")
-    }
 });

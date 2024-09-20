@@ -36,13 +36,13 @@
         <div class="floating-side-sheet" id="floating-side-sheet">
         	<div class="search-container">
                 <div class="search-container_lower-row" id="quickfilter-container_default">
-                    <button class="quick-filter_button" id="quick-filter_all"></button>
+                    <button class="quick-filter_button" id="quick-filter_all">
+                        Top results
+                    </button>
                     <button class="quick-filter_button" id="quick-filter_people">
-                        <img src="icons/checked.png">
                         People
                     </button>
                     <button class="quick-filter_button" id="quick-filter_page">
-                        <img src="icons/checked.png">
                         Pages
                     </button>
                 </div>
@@ -60,36 +60,19 @@
             </div>
             <div class="dynamic-content_block" id="dynamic-content_block">
                 <div class="content-body" id="content-container">
-                    <h3 class="content-subtitle_text">Recent</h3>
-                    <div class="inline-row">
-                        <div class="inline-row_nested">
-                            <img class="sm-avatar" src="images/image1.png">
-                            <div class="inline-text_container">
-                                <div class="upper_inline-text_container">
-                                    <h4 class="inline-title_text">Sam Limby</h4>
-                                    <div class="inline-divider"></div>
-                                    <div class="inline-activity_bar">
-                                        <div class="inactive-circle"></div>
-                                        <p class="inline-footnote_text">
-                                            Last signed in: 3 hours ago
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">Product Designer</p>
-                                    <div class="inline-divider"></div>
-                                    <p class="inline-footnote_text">Accessed: 4 hours ago</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="content-container_subtitle-row">
+                        <h3 class="recent-subtitle_text">Recent</h3>
+                        <div class="content-header_line"></div>
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
-                            <img class="sm-avatar" src="images/female-image5.png">
+                            <div class="avatar-container">
+                                <img class="avatar-image_active" src="images/image1.png">
+                                <div class="avatar-ring_gap"></div>
+                            </div>
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
-                                    <h4 class="inline-title_text">Jane Doe</h4>
-                                    <div class="inline-divider"></div>
+                                    <h4 class="inline-title_text">Sam Limby</h4>
                                     <div class="inline-activity_bar">
                                         <div class="active-circle"></div>
                                         <p class="inline-footnote_text">
@@ -98,79 +81,99 @@
                                     </div>
                                 </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">Customer Success Agent</p>
+                                    <p class="primary-inline-body_text">Product Designer</p>
                                     <div class="inline-divider"></div>
-                                    <p class="inline-footnote_text">Accessed: 5 hours ago</p>
+                                    <p class="secondary-inline-body_text">Accessed: 4 hours ago</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
-                            <img class="sm-avatar" src="images/icon-avatar.png">
+                            <div class="avatar-container">
+                                <img class="avatar-image_inactive" src="images/female-image5.png">
+                                <div class="avatar-ring_gap"></div>
+                            </div>
+                            <div class="inline-text_container">
+                                <div class="upper_inline-text_container">
+                                    <h4 class="inline-title_text">Jane Doe</h4>
+                                    <div class="inline-activity_bar">
+                                        <div class="inactive-circle"></div>
+                                        <p class="inline-footnote_text">
+                                            Last Log In: 04:35pm
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lower_inline-text_container">
+                                    <p class="primary-inline-body_text">Customer Success Agent</p>
+                                    <div class="inline-divider"></div>
+                                    <p class="secondary-inline-body_text">Accessed: 5 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-row">
+                        <div class="inline-row_nested">
+                            <img class="page-category_avatar" src="images/icon-avatar.png">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
                                     <h4 class="inline-title_text">Roles & Permissions</h4>
-                                    <div class="inline-divider"></div>
-                                    <p class="inline-footnote_text">
-                                        People & Permissions > Roles/Permissions
-                                    </p>
                                 </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-footnote_text">Accessed: 5 hours ago</p>
+                                    <p class="primary-inline-body_text">
+                                        People & Permissions > Roles/Permissions
+                                    </p>
+                                    <div class="inline-divider"></div>
+                                    <p class="secondary-inline-body_text">Accessed: 5 hours ago</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
-                            <img class="sm-avatar" src="images/placeholder.png">
+                            <img class="group_avatar" src="images/placeholder.png">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
                                     <h4 class="inline-title_text">test group</h4>
-                                    <div class="inline-divider"></div>
-                                    <p class="inline-footnote_text">
-                                        Group members: 45 users
-                                    </p>
                                 </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-body_text">USA Product Team</p>
+                                    <p class="primary-inline-body_text">USA Product Team</p>
                                     <div class="inline-divider"></div>
-                                    <p class="inline-footnote_text">Accessed: 6 hours ago</p>
+                                    <p class="secondary-inline-body_text">Accessed: 6 hours ago</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
-                            <img class="sm-avatar" src="images/icon-avatar.png">
+                            <img class="page-category_avatar" src="images/icon-avatar.png">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
                                     <h4 class="inline-title_text">Operational Console</h4>
-                                    <div class="inline-divider"></div>
-                                    <p class="inline-footnote_text">
-                                        Troubleshooting > Operational Console
-                                    </p>
                                 </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-footnote_text">Accessed: 2 days ago</p>
+                                    <p class="primary-inline-body_text">
+                                        Troubleshooting > Operational Console
+                                    </p>
+                                    <div class="inline-divider"></div>
+                                    <p class="secondary-inline-body_text">Accessed: 2 days ago</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="inline-row">
                         <div class="inline-row_nested">
-                            <img class="sm-avatar" src="images/icon-avatar.png">
+                            <img class="page-category_avatar" src="images/icon-avatar.png">
                             <div class="inline-text_container">
                                 <div class="upper_inline-text_container">
                                     <h4 class="inline-title_text">People</h4>
-                                    <div class="inline-divider"></div>
-                                    <p class="inline-footnote_text">
-                                        People & Permissions > People
-                                    </p>
                                 </div>
                                 <div class="lower_inline-text_container">
-                                    <p class="inline-footnote_text">Accessed: 2 days ago</p>
+                                    <p class="primary-inline-body_text">
+                                        People & Permissions > People
+                                    </p>
+                                    <div class="inline-divider"></div>
+                                    <p class="secondary-inline-body_text">Accessed: 2 days ago</p>
                                 </div>
                             </div>
                         </div>
