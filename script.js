@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="icons/page-icon.png">
                     <h3 class="content-subtitle_text">Pages</h3>
                     <div class="content-header_line"></div>
-                    <button class="view-more_button">View all</button>
+                    <button id="page-view_more" class="view-more_button">View all</button>
                 </div>
             `;
             pageContainer.classList.add("content-section");
@@ -597,8 +597,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="icons/page-icon.png">
                 <h3 class="content-subtitle_text">Pages (${pageCount})</h3>
                 <div class="content-header_line"></div>
-                <button class="view-more_button">View all</button>
             `;
+
+            if (pageCount > 6) {
+                pageHeader.innerHTML += `
+                    <button id="page-view_more" class="view-more_button">View all</button>
+                `;
+            }
         }
 
 
@@ -612,8 +617,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 <img src="icons/user-icon.png">
                 <h3 class="content-subtitle_text">Directory (${peopleCount})</h3>
                 <div class="content-header_line"></div>
-                <button class="view-more_button">View all</button>
             `;
+
+            if (peopleCount > 6) {
+                peopleHeader.innerHTML += `
+                    <button id="people-view_more" class="view-more_button">View all</button>
+                `;
+            }
         }
     };
 
@@ -689,6 +699,62 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
     }
+
+    document.body.addEventListener("click", function(event){
+        if (event.target && event.target.matches("#people-view_more")) {
+            
+            const peopleRows = peopleContainer.querySelectorAll('[id^="people-inlineRow"]');
+            const peopleCount = peopleRows.length;
+            let peopleHeader = document.querySelector("#page-header_element1");
+
+            containerLimit = false;
+            peopleQuickFilterCount = 1;
+            pageQuickFilterCount = 0;
+            allQuickFilterCount = 0;
+            console.log(containerLimit)
+            quickFilterLogic()
+            filterCheck()
+            peopleSectionLimit()
+
+            if (peopleHeader) {
+                peopleHeader.innerHTML = `
+                <img src="icons/page-icon.png">
+                <h3 class="content-subtitle_text">Directory (${peopleCount})</h3>
+                <div class="content-header_line"></div>
+            `;
+            }
+
+        }
+    })
+
+    document.body.addEventListener("click", function(event){
+        if (event.target && event.target.matches("#page-view_more")) {
+
+            const pageRows = pageContainer.querySelectorAll('[id^="page-inlineRow"]');
+            const pageCount = pageRows.length;
+            let pageHeader = document.querySelector("#page-header_element");
+
+            containerLimit = false;
+            pageQuickFilterCount = 1;
+            peopleQuickFilterCount = 0;
+            allQuickFilterCount = 0;
+            console.log(containerLimit)
+            quickFilterLogic()
+            filterCheck()
+            pageSectionLimit()
+
+            if (pageHeader) {
+                pageHeader.innerHTML = `
+                <img src="icons/page-icon.png">
+                <h3 class="content-subtitle_text">Pages (${pageCount})</h3>
+                <div class="content-header_line"></div>
+            `;
+            }
+
+        }
+    })
+
+
 
 
     if (inlineRow) {

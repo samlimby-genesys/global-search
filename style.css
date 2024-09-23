@@ -527,6 +527,7 @@
     font-weight: 600;
     line-height: 18px; /* 150% */
     width: 88px;
+    cursor: pointer;
 }
 
 .content-container_subtitle-row {
