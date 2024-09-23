@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const defaultFilter = filterRowContainer.innerHTML;
     const clearSearch = document.getElementById("search-clear_button");
     const originalContent = frameContainer.innerHTML;
+    const containerMaxItems = 6;
     let searchData = [];
 
     const peopleContainer = document.createElement("div");
@@ -172,6 +173,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         Top results
                     `;
 
+                    
+
                     if (result.category === "people") {
                         peopleContainer.appendChild(inlineRow);
                     } else if (result.category === "page") {
@@ -200,6 +203,8 @@ document.addEventListener("DOMContentLoaded", function() {
             let helpTextElement = document.getElementById("help-text_block");
             helpTextElement.innerHTML = `<p id="help-text_block" class="help-body_text">23 related articles to “${searchInput.value}” found in help. Click to explore.</p>`
             updateRowCounts()
+            peopleSectionLimit()
+            pageSectionLimit()
             return;
         };
 
@@ -348,23 +353,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (existingKebabContainer && !event.target.closest(".kebab-container1")) {
                 existingKebabContainer.remove()
             }
-        }
-
-        if (inlineRow) {
-            inlineRow.addEventListener("mouseover", function(){
-                inlineRow.classList.replace("inline-row", "inline-row-hover");
-                const inlineRowArrow = document.createElement("img");
-                inlineRowArrow.innerHTML = `
-                    <img id="inline-arrow" src="icons/open.png">
-                `;
-                inlineRow.appendChild(inlineRowArrow);
-            });
-    
-            inlineRow.addEventListener("mouseout", function(){
-                inlineRow.classList.replace("inline-row-hover", "inline-row");
-                const inlineRowArrow = document.querySelector("#inline-arrow");
-                inlineRowArrow.remove()
-            });
         }
 
         if (existingKebabIcon > 2) {
@@ -600,6 +588,7 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
         }
 
+
         const peopleRows = peopleContainer.querySelectorAll('[id^="people-inlineRow"]');
         const peopleCount = peopleRows.length;
 
@@ -615,7 +604,57 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    updateRowCounts()
+    function peopleSectionLimit() {
+        let peopleChildrenArray = Array.from(peopleContainer.children);
+        let peopleChildrenCount = peopleChildrenArray.length
+        let excessPeopleCount = peopleChildrenCount - containerMaxItems;
+
+
+        if (excessPeopleCount >= 0) {
+
+            for (let i = 0; i < excessPeopleCount; i++) {
+                let itemsToRemove = peopleChildrenCount - 1 - i;
+                let elementToRemove = peopleChildrenArray[itemsToRemove]
+                elementToRemove.remove();
+            }
+        }
+
+        console.log(peopleChildrenCount)
+
+    }
+
+    function pageSectionLimit() {
+        console.log(pageContainer.children)
+
+        if (pageContainer) {
+            while (pageContainer.children.length > containerMaxItems) {
+                pageContainer.removeChild(pageContainer.lastElementChild);
+            }
+        } else {
+            console.log("operation not working")
+        }
+
+        console.log(pageContainer.children)
+
+    }
+
+
+    if (inlineRow) {
+        inlineRow.addEventListener("mouseover", function(){
+            inlineRow.classList.replace("inline-row", "inline-row-hover");
+            const inlineRowArrow = document.createElement("img");
+            inlineRowArrow.innerHTML = `
+                <img id="inline-arrow" src="icons/open.png">
+            `;
+            inlineRow.appendChild(inlineRowArrow);
+        });
+
+        inlineRow.addEventListener("mouseout", function(){
+            inlineRow.classList.replace("inline-row-hover", "inline-row");
+            const inlineRowArrow = document.querySelector("#inline-arrow");
+            inlineRowArrow.remove()
+        });
+    }
 
 
 });
