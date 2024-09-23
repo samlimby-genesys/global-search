@@ -2750,6 +2750,136 @@
     "team": "Cloud Services Team"
     },
     {
+    "result_title": "test group1",
+    "result_subtitle": "",
+    "image": "placeholder.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "Offical",
+    "team": ""
+    },
+    {
+    "result_title": "test group3",
+    "result_subtitle": "",
+    "image": "placeholder.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "Offical",
+    "team": ""
+    },
+    {
+    "result_title": "test group2",
+    "result_subtitle": "",
+    "image": "placeholder.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "Offical",
+    "team": ""
+    },
+    {
+    "result_title": "Seattle Product Group",
+    "result_subtitle": "",
+    "image": "site.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "Social",
+    "team": ""
+    },
+    {
+    "result_title": "Seattle, United States",
+    "result_subtitle": "",
+    "image": "seattle.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
+    "result_title": "Dublin, Ireland",
+    "result_subtitle": "",
+    "image": "dublin.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
+    "result_title": "San Francisco, United States",
+    "result_subtitle": "",
+    "image": "sf.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
+    "result_title": "New York City, United States",
+    "result_subtitle": "",
+    "image": "nyc.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
+    "result_title": "Chester, United Kingdom",
+    "result_subtitle": "",
+    "image": "chester.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
+    "result_title": "London, United Kingdom",
+    "result_subtitle": "",
+    "image": "london.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
+    "result_title": "Mare Tranquillitatis, Moon",
+    "result_subtitle": "",
+    "image": "moon.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
+    "result_title": "Olympus Mons, Mars",
+    "result_subtitle": "",
+    "image": "mars1.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
+    "result_title": "Valles Marineris, Mars",
+    "result_subtitle": "",
+    "image": "mars2.png",
+    "status": "away",
+    "category": "people",
+    "entity": "group/location",
+    "role": "",
+    "team": ""
+    },
+    {
         "result_title": "Sam Limby",
         "result_subtitle": "Product Designer for Global Search.",
         "image": "image1.png",

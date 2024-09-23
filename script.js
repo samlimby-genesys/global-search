@@ -103,12 +103,19 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (result.category === "people") {
                         console.log(result.image)
                         inlineRow.setAttribute("id", "people-inlineRow");
-                        innerHTMLContent += `
+
+                        if (result.entity === "group/location") {
+                            innerHTMLContent += `
+                                <img class="group_avatar" src="images/${result.image}"></img>
+                            `;
+                        } else {
+                            innerHTMLContent += `
                             <div class="avatar-container">
                                 <img class="avatar-image_active" src="images/${result.image}"></img>
                                 <div class="avatar-ring_gap"></div>
                             </div>
-                        `;
+                            `;
+                        }
                     };
 
                     if (result.category === "page") {
@@ -128,28 +135,45 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     // Adding status to just people
                     if (result.category === "people") {
-                        innerHTMLContent += `
-                            <div class="inline-activity_bar">
-                                <div class="active-circle"></div>
-                                <p class="inline-footnote_text">
-                                    Active
-                                </p>
-                            </div>
-                        `;
+
+                        if (result.entity === "group/location") {
+                            innerHTMLContent += `
+                            `;
+                        } else {
+                            innerHTMLContent += `
+                                <div class="inline-activity_bar">
+                                    <div class="active-circle"></div>
+                                    <p class="inline-footnote_text">
+                                        Active
+                                    </p>
+                                </div>
+                            `;
+                        }
                     };
 
                     // specifying the description by people or page
                     if (result.category === "people") {
-                        innerHTMLContent += `
-                                    </div>
-                                    <div class="lower_inline-text_container">
-                                        <p id="search-keyword" class="primary-inline-body_text">${result.role}</p>
-                                        <div class="inline-divider"></div>
-                                        <p class="secondary-inline-body_text">${result.team}</p>
+                        if (result.entity === "group/location") {
+                            innerHTMLContent += `
+                                        </div>
+                                        <div class="lower_inline-text_container">
+                                            <p id="search-keyword" class="primary-inline-body_text">${result.role}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        `;
+                            `;
+                        } else {
+                            innerHTMLContent += `
+                                        </div>
+                                        <div class="lower_inline-text_container">
+                                            <p id="search-keyword" class="primary-inline-body_text">${result.role}</p>
+                                            <div class="inline-divider"></div>
+                                            <p class="secondary-inline-body_text">${result.team}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }
                     }
 
 
@@ -702,7 +726,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.body.addEventListener("click", function(event){
         if (event.target && event.target.matches("#people-view_more")) {
-            
+
             const peopleRows = peopleContainer.querySelectorAll('[id^="people-inlineRow"]');
             const peopleCount = peopleRows.length;
             let peopleHeader = document.querySelector("#page-header_element1");
