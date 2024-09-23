@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const defaultFilter = filterRowContainer.innerHTML;
     const clearSearch = document.getElementById("search-clear_button");
     const originalContent = frameContainer.innerHTML;
-    const containerMaxItems = 6;
+    let containerLimit = true;
     let searchData = [];
 
     const peopleContainer = document.createElement("div");
@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
             updateRowCounts()
             peopleSectionLimit()
             pageSectionLimit()
+        
             return;
         };
 
@@ -360,73 +361,73 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    document.addEventListener("click", function(event){
-        let customizeConfirmation = event.target.closest(".customize_confirmation");
-        console.log(customizeConfirmation)
+    // document.addEventListener("click", function(event){
+    //     let customizeConfirmation = event.target.closest(".customize_confirmation");
+    //     console.log(customizeConfirmation)
 
-        if (customizeConfirmation) {
-            filterAndDisplayResults()
-            peopleContainer.classList.replace("customize_content-section", "content-section");
-            pageContainer.classList.replace("customize_content-section", "content-section");
-        }
-    })
+    //     if (customizeConfirmation) {
+    //         filterAndDisplayResults()
+    //         peopleContainer.classList.replace("customize_content-section", "content-section");
+    //         pageContainer.classList.replace("customize_content-section", "content-section");
+    //     }
+    // })
 
-    function initializeDragAndDrop() {
-        const draggableItems = document.querySelectorAll(".customize_content-section");
+    // function initializeDragAndDrop() {
+    //     const draggableItems = document.querySelectorAll(".customize_content-section");
 
-        draggableItems.forEach((item) => {
-            item.addEventListener("dragstart", handleDragStart);
-            item.addEventListener("dragover", handleDragOver);
-            item.addEventListener("drop", handleDrop);
-        }); 
-    }
+    //     draggableItems.forEach((item) => {
+    //         item.addEventListener("dragstart", handleDragStart);
+    //         item.addEventListener("dragover", handleDragOver);
+    //         item.addEventListener("drop", handleDrop);
+    //     }); 
+    // }
 
-    function handleDragStart(event) {
-        event.dataTransfer.setData("text/plain", event.target.id);
-        event.dropEffect = "move";
-    }
+    // function handleDragStart(event) {
+    //     event.dataTransfer.setData("text/plain", event.target.id);
+    //     event.dropEffect = "move";
+    // }
 
-    function handleDragOver(event) {
-        event.preventDefault();
-        event.dataTransfer.dropEffect = "move";
-    }
+    // function handleDragOver(event) {
+    //     event.preventDefault();
+    //     event.dataTransfer.dropEffect = "move";
+    // }
 
-    function handleDrop(event) {
-        event.preventDefault();
+    // function handleDrop(event) {
+    //     event.preventDefault();
         
-        const draggedItemId = event.dataTransfer.getData("text/plain");
-        const draggedItem = document.getElementById(draggedItemId);
-        const dropTarget = event.target.closest(".content-container_subtitle-row");
+    //     const draggedItemId = event.dataTransfer.getData("text/plain");
+    //     const draggedItem = document.getElementById(draggedItemId);
+    //     const dropTarget = event.target.closest(".content-container_subtitle-row");
 
-        if (draggedItem && dropTarget && draggedItem !== dropTarget) {
-            const parent = dropTarget.parentNode;
-            parent.insertBefore(draggedItem, dropTarget);
-            parent.insertBefore(dropTarget, draggedItem.nextSibling);
-        }
-    }
-
-
-    document.body.addEventListener("click", function(){
-        const peopleKebabMenu = document.querySelectorAll(".kebab-container1"); 
-        if (peopleKebabMenu.length > 1) {
-            peopleKebabMenu.remove();
-        }
-
-        const pageKebabMenu = document.querySelectorAll(".kebab-container"); 
-        if (pageKebabMenu.length > 1) {
-            pageKebabMenu.remove();
-        }
-    });
+    //     if (draggedItem && dropTarget && draggedItem !== dropTarget) {
+    //         const parent = dropTarget.parentNode;
+    //         parent.insertBefore(draggedItem, dropTarget);
+    //         parent.insertBefore(dropTarget, draggedItem.nextSibling);
+    //     }
+    // }
 
 
-    frameContainer.addEventListener("click", createPage);
-    frameContainer.addEventListener("click", createPeople);
+    // document.body.addEventListener("click", function(){
+    //     const peopleKebabMenu = document.querySelectorAll(".kebab-container1"); 
+    //     if (peopleKebabMenu.length > 1) {
+    //         peopleKebabMenu.remove();
+    //     }
 
-    // category drag and drop selection
+    //     const pageKebabMenu = document.querySelectorAll(".kebab-container"); 
+    //     if (pageKebabMenu.length > 1) {
+    //         pageKebabMenu.remove();
+    //     }
+    // });
 
-    function drag(event) {
-        event.dataTransfer.setData("text", )
-    }
+
+    // frameContainer.addEventListener("click", createPage);
+    // frameContainer.addEventListener("click", createPeople);
+
+    // // category drag and drop selection
+
+    // function drag(event) {
+    //     event.dataTransfer.setData("text", )
+    // }
 
 
 
@@ -484,25 +485,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // quick filter actions
     allQuickFilter.addEventListener("click", function() {
+        containerLimit = true;
         allQuickFilterCount = 1;
         quickFilterLogic()
         filterCheck()
+        pageSectionLimit()
+        peopleSectionLimit()
     });
 
     peopleQuickFilter.addEventListener("click", function() {
+        containerLimit = false;
         peopleQuickFilterCount = 1;
         pageQuickFilterCount = 0;
         allQuickFilterCount = 0;
+        console.log(containerLimit)
         quickFilterLogic()
         filterCheck()
+        peopleSectionLimit()
     });
 
     pageQuickFilter.addEventListener("click", function() {
+        containerLimit = false;
         pageQuickFilterCount = 1;
         peopleQuickFilterCount = 0;
         allQuickFilterCount = 0;
+        console.log(containerLimit)
         quickFilterLogic()
         filterCheck()
+        pageSectionLimit()
     });
 
     function quickFilterLogic() {
@@ -546,6 +556,9 @@ document.addEventListener("DOMContentLoaded", function() {
             peopleQuickFilter.classList.replace("quick-filter_button", "quick-filter_button-active");
 
         } else if (pageQuickFilterCount === 1) {
+
+            let pageRows = pageContainer.querySelectorAll('[id^="page-inlineRow"]');
+            let pageCount = pageRows.length;
 
             allQuickFilterCount = 0;
             allQuickFilter.classList.replace("quick-filter_button-active", "quick-filter_button");
@@ -605,36 +618,75 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     function peopleSectionLimit() {
+        let containerMaxItems = 6;
+
         let peopleChildrenArray = Array.from(peopleContainer.children);
         let peopleChildrenCount = peopleChildrenArray.length
-        let excessPeopleCount = peopleChildrenCount - containerMaxItems;
 
+        if (!containerLimit) { 
+            
+            containerMaxItems = peopleChildrenCount;
+            console.log("fasly container limit")
+            console.log(peopleChildrenArray)
 
-        if (excessPeopleCount >= 0) {
-
-            for (let i = 0; i < excessPeopleCount; i++) {
-                let itemsToRemove = peopleChildrenCount - 1 - i;
-                let elementToRemove = peopleChildrenArray[itemsToRemove]
-                elementToRemove.remove();
+            for (let i = 0; i < peopleChildrenCount; i++) {
+                if (i < containerMaxItems) {
+                    peopleChildrenArray[i].style.display = "";
+                } else {
+                    peopleChildrenArray[i].style.display = "none";
+                }
+            }
+    
+        } else {
+            for (let i = 0; i < peopleChildrenCount; i++) {
+                if (i < containerMaxItems) {
+                    peopleChildrenArray[i].style.display = "";
+                } else {
+                    peopleChildrenArray[i].style.display = "none";
+                }
             }
         }
-
-        console.log(peopleChildrenCount)
 
     }
 
     function pageSectionLimit() {
-        console.log(pageContainer.children)
+        let containerMaxItems = 6;
+        containerChild = pageContainer.children;
 
-        if (pageContainer) {
-            while (pageContainer.children.length > containerMaxItems) {
-                pageContainer.removeChild(pageContainer.lastElementChild);
+        console.log(containerChild)
+        console.log(containerLimit)
+
+        if (!containerLimit) {
+
+            containerMaxItems = pageContainer.children.length
+            console.log("falsy page limit")
+            console.log(pageContainer.children.length)
+
+            if (pageContainer) {
+                for (let i = 0; i < pageContainer.children.length; i++) {
+                    if (i < containerMaxItems) {
+                        pageContainer.children[i].style.display = "";
+                    } else {
+                        pageContainer.children[i].style.display = "none";
+                    }
+                }
+            } else {
+                console.log("operation not working")
             }
+    
         } else {
-            console.log("operation not working")
+            if (pageContainer) {
+                for (let i = 0; i < pageContainer.children.length; i++) {
+                    if (i < containerMaxItems) {
+                        pageContainer.children[i].style.display = "";
+                    } else {
+                        pageContainer.children[i].style.display = "none";
+                    }
+                }
+            } else {
+                console.log("operation not working")
+            }
         }
-
-        console.log(pageContainer.children)
 
     }
 
@@ -658,3 +710,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+
