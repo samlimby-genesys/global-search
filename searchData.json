@@ -743,468 +743,800 @@
         "category": "page"
     },
     {
-        "result_title": "James Smith",
-        "result_subtitle": "Focused on delivering impactful solutions.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image3.png",
-        "category": "people"
+    "result_title": "Emily Johnson",
+    "result_subtitle": "Passionate customer support specialist with a knack for problem-solving.",
+    "image": "female-image-7",
+    "category": "people",
+    "role": "Customer Support Specialist",
+    "team": "Customer Service Team"
     },
     {
-        "result_title": "Emma Johnson",
-        "result_subtitle": "Empowering teams through effective communication.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image7.png",
-        "category": "people"
+    "result_title": "William Brown",
+    "result_subtitle": "Experienced software developer focusing on innovative solutions.",
+    "image": "men-image-2",
+    "category": "people",
+    "role": "Software Developer",
+    "team": "Engineering Team"
     },
     {
-        "result_title": "John Williams",
-        "result_subtitle": "Driven by a passion for innovation.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image9.png",
-        "category": "people"
+    "result_title": "Olivia Davis",
+    "result_subtitle": "Creative marketing manager with a love for brand storytelling.",
+    "image": "female-image-5",
+    "category": "people",
+    "role": "Marketing Manager",
+    "team": "Marketing Team"
     },
     {
-        "result_title": "Olivia Brown",
-        "result_subtitle": "Dedicated to continuous learning.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image2.png",
-        "category": "people"
+    "result_title": "James Wilson",
+    "result_subtitle": "Dedicated QA engineer ensuring top-notch product quality.",
+    "image": "men-image-9",
+    "category": "people",
+    "role": "QA Engineer",
+    "team": "Quality Assurance Team"
     },
     {
-        "result_title": "Michael Miller",
-        "result_subtitle": "Thrives on tackling challenging problems.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image4.png",
-        "category": "people"
+    "result_title": "Sophia Miller",
+    "result_subtitle": "Enthusiastic HR coordinator committed to employee satisfaction.",
+    "image": "female-image-3",
+    "category": "people",
+    "role": "HR Coordinator",
+    "team": "Human Resources Team"
     },
     {
-        "result_title": "Sophia Davis",
-        "result_subtitle": "Passionate about user-centered design.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image6.png",
-        "category": "people"
+    "result_title": "Benjamin Taylor",
+    "result_subtitle": "Innovative product manager driving customer-centric solutions.",
+    "image": "men-image-4",
+    "category": "people",
+    "role": "Product Manager",
+    "team": "Product Management Team"
     },
     {
-        "result_title": "David Wilson",
-        "result_subtitle": "Always seeking to improve and innovate.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image10.png",
-        "category": "people"
+    "result_title": "Charlotte Anderson",
+    "result_subtitle": "Skilled UX designer crafting intuitive user experiences.",
+    "image": "female-image-6",
+    "category": "people",
+    "role": "UX Designer",
+    "team": "Design Team"
     },
     {
-        "result_title": "Isabella Martinez",
-        "result_subtitle": "Enthusiastic about collaboration and growth.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image4.png",
-        "category": "people"
+    "result_title": "Daniel Thomas",
+    "result_subtitle": "Results-driven sales executive with a passion for client success.",
+    "image": "men-image-1",
+    "category": "people",
+    "role": "Sales Executive",
+    "team": "Sales Team"
     },
     {
-        "result_title": "William Anderson",
-        "result_subtitle": "Committed to excellence in every task.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image1.png",
-        "category": "people"
+    "result_title": "Amelia Jackson",
+    "result_subtitle": "Analytical data scientist uncovering insights from big data.",
+    "image": "female-image-9",
+    "category": "people",
+    "role": "Data Scientist",
+    "team": "Data Analytics Team"
     },
     {
-        "result_title": "Mia Thompson",
-        "result_subtitle": "Focused on creating value through teamwork.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image8.png",
-        "category": "people"
+    "result_title": "Michael White",
+    "result_subtitle": "Network engineer ensuring seamless connectivity across platforms.",
+    "image": "men-image-6",
+    "category": "people",
+    "role": "Network Engineer",
+    "team": "IT Infrastructure Team"
     },
     {
-        "result_title": "Noah Harris",
-        "result_subtitle": "Strives for innovation in every project.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image6.png",
-        "category": "people"
+    "result_title": "Isabella Harris",
+    "result_subtitle": "Talented content writer crafting compelling narratives.",
+    "image": "female-image-2",
+    "category": "people",
+    "role": "Content Writer",
+    "team": "Content Team"
     },
     {
-        "result_title": "Ava Clark",
-        "result_subtitle": "Empowering teams with clear communication.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image3.png",
-        "category": "people"
+    "result_title": "David Martin",
+    "result_subtitle": "Strategic operations manager optimizing workflows and efficiency.",
+    "image": "men-image-8",
+    "category": "people",
+    "role": "Operations Manager",
+    "team": "Operations Team"
     },
     {
-        "result_title": "Liam Hall",
-        "result_subtitle": "Committed to delivering excellence.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image8.png",
-        "category": "people"
+    "result_title": "Mia Thompson",
+    "result_subtitle": "Detail-oriented accountant managing financial records accurately.",
+    "image": "female-image-4",
+    "category": "people",
+    "role": "Accountant",
+    "team": "Finance Team"
     },
     {
-        "result_title": "Charlotte Rodriguez",
-        "result_subtitle": "Driven by a passion for creative solutions.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image9.png",
-        "category": "people"
+    "result_title": "Christopher Garcia",
+    "result_subtitle": "Proactive project manager delivering projects on time and within budget.",
+    "image": "men-image-5",
+    "category": "people",
+    "role": "Project Manager",
+    "team": "Project Management Team"
     },
     {
-        "result_title": "Benjamin Lewis",
-        "result_subtitle": "Always ready for new challenges.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image7.png",
-        "category": "people"
+    "result_title": "Harper Martinez",
+    "result_subtitle": "Innovative software architect designing scalable solutions.",
+    "image": "female-image-8",
+    "category": "people",
+    "role": "Software Architect",
+    "team": "Architecture Team"
     },
     {
-        "result_title": "Mia Walker",
-        "result_subtitle": "A strong believer in teamwork and innovation.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image10.png",
-        "category": "people"
+    "result_title": "Alexander Robinson",
+    "result_subtitle": "Experienced business analyst bridging gaps between IT and business.",
+    "image": "men-image-10",
+    "category": "people",
+    "role": "Business Analyst",
+    "team": "Business Analysis Team"
     },
     {
-        "result_title": "Elijah Young",
-        "result_subtitle": "Focused on delivering impactful solutions.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image5.png",
-        "category": "people"
+    "result_title": "Evelyn Clark",
+    "result_subtitle": "Dedicated customer success manager fostering client relationships.",
+    "image": "female-image-1",
+    "category": "people",
+    "role": "Customer Success Manager",
+    "team": "Customer Success Team"
     },
     {
-        "result_title": "Amelia King",
-        "result_subtitle": "Striving to make a difference every day.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image2.png",
-        "category": "people"
+    "result_title": "Jacob Rodriguez",
+    "result_subtitle": "Talented graphic designer creating visually stunning content.",
+    "image": "men-image-7",
+    "category": "people",
+    "role": "Graphic Designer",
+    "team": "Creative Team"
     },
     {
-        "result_title": "Mason Wright",
-        "result_subtitle": "Dedicated to creating innovative solutions.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image2.png",
-        "category": "people"
+    "result_title": "Abigail Lewis",
+    "result_subtitle": "Meticulous compliance officer ensuring regulatory adherence.",
+    "image": "female-image-10",
+    "category": "people",
+    "role": "Compliance Officer",
+    "team": "Compliance Team"
     },
     {
-        "result_title": "Isabella Scott",
-        "result_subtitle": "Believes in the power of collaboration.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image5.png",
-        "category": "people"
+    "result_title": "Lucas Lee",
+    "result_subtitle": "Expert cloud engineer specializing in AWS solutions.",
+    "image": "men-image-3",
+    "category": "people",
+    "role": "Cloud Engineer",
+    "team": "Cloud Services Team"
     },
     {
-        "result_title": "Lucas Hill",
-        "result_subtitle": "Passionate about continuous improvement.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image9.png",
-        "category": "people"
+    "result_title": "Emily Walker",
+    "result_subtitle": "HR manager committed to cultivating a positive workplace.",
+    "image": "female-image-5",
+    "category": "people",
+    "role": "HR Manager",
+    "team": "Human Resources Team"
     },
     {
-        "result_title": "Sophia Adams",
-        "result_subtitle": "Thrives on tackling complex challenges.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image7.png",
-        "category": "people"
+    "result_title": "Matthew Hall",
+    "result_subtitle": "Seasoned database administrator managing critical data systems.",
+    "image": "men-image-2",
+    "category": "people",
+    "role": "Database Administrator",
+    "team": "IT Infrastructure Team"
     },
     {
-        "result_title": "Henry Green",
-        "result_subtitle": "Driven by a commitment to excellence.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image4.png",
-        "category": "people"
+    "result_title": "Elizabeth Allen",
+    "result_subtitle": "Strategic SEO specialist improving online visibility.",
+    "image": "female-image-6",
+    "category": "people",
+    "role": "SEO Specialist",
+    "team": "Digital Marketing Team"
     },
     {
-        "result_title": "Evelyn Baker",
-        "result_subtitle": "Focused on user-centric design.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image1.png",
-        "category": "people"
+    "result_title": "Andrew Young",
+    "result_subtitle": "Agile scrum master facilitating effective team collaboration.",
+    "image": "men-image-4",
+    "category": "people",
+    "role": "Scrum Master",
+    "team": "Agile Team"
     },
     {
-        "result_title": "Alexander Nelson",
-        "result_subtitle": "Innovating through strategic thinking.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image1.png",
-        "category": "people"
+    "result_title": "Avery Hernandez",
+    "result_subtitle": "Customer experience manager enhancing client satisfaction.",
+    "image": "female-image-7",
+    "category": "people",
+    "role": "Customer Experience Manager",
+    "team": "Customer Service Team"
     },
     {
-        "result_title": "Avery Carter",
-        "result_subtitle": "Empowering others through collaboration.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image8.png",
-        "category": "people"
+    "result_title": "Joshua King",
+    "result_subtitle": "DevOps engineer automating deployment pipelines.",
+    "image": "men-image-1",
+    "category": "people",
+    "role": "DevOps Engineer",
+    "team": "DevOps Team"
     },
     {
-        "result_title": "Daniel Mitchell",
-        "result_subtitle": "Dedicated to achieving measurable results.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image6.png",
-        "category": "people"
+    "result_title": "Sofia Wright",
+    "result_subtitle": "Legal advisor providing expert counsel on corporate matters.",
+    "image": "female-image-3",
+    "category": "people",
+    "role": "Legal Advisor",
+    "team": "Legal Team"
     },
     {
-        "result_title": "Harper White",
-        "result_subtitle": "Believes in the power of data-driven decisions.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image4.png",
-        "category": "people"
+    "result_title": "Ryan Lopez",
+    "result_subtitle": "IT support specialist resolving technical issues promptly.",
+    "image": "men-image-9",
+    "category": "people",
+    "role": "IT Support Specialist",
+    "team": "IT Support Team"
     },
     {
-        "result_title": "Sebastian Perez",
-        "result_subtitle": "A leader in strategic innovation.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image10.png",
-        "category": "people"
+    "result_title": "Grace Hill",
+    "result_subtitle": "E-commerce manager optimizing online sales strategies.",
+    "image": "female-image-9",
+    "category": "people",
+    "role": "E-commerce Manager",
+    "team": "E-commerce Team"
     },
     {
-        "result_title": "Ella Thompson",
-        "result_subtitle": "Committed to fostering a positive work environment.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image6.png",
-        "category": "people"
+    "result_title": "Nicholas Scott",
+    "result_subtitle": "Cybersecurity analyst protecting systems from threats.",
+    "image": "men-image-6",
+    "category": "people",
+    "role": "Cybersecurity Analyst",
+    "team": "Security Team"
     },
     {
-        "result_title": "Matthew Robinson",
-        "result_subtitle": "Dedicated to excellence in project delivery.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image2.png",
-        "category": "people",
-        "role": "User Experience Designer",
-        "team": "AI & Automation"
+    "result_title": "Victoria Green",
+    "result_subtitle": "Supply chain coordinator streamlining logistics processes.",
+    "image": "female-image-2",
+    "category": "people",
+    "role": "Supply Chain Coordinator",
+    "team": "Supply Chain Team"
     },
     {
-        "result_title": "Abigail Harris",
-        "result_subtitle": "Focused on delivering innovative solutions.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image3.png",
-        "category": "people"
+    "result_title": "Samuel Adams",
+    "result_subtitle": "Data engineer building robust data pipelines.",
+    "image": "men-image-8",
+    "category": "people",
+    "role": "Data Engineer",
+    "team": "Data Engineering Team"
     },
     {
-        "result_title": "Joseph Martinez",
-        "result_subtitle": "Passionate about building strong teams.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image8.png",
-        "category": "people"
+    "result_title": "Lily Baker",
+    "result_subtitle": "PR specialist managing public relations and media outreach.",
+    "image": "female-image-4",
+    "category": "people",
+    "role": "PR Specialist",
+    "team": "Public Relations Team"
     },
     {
-        "result_title": "Grace Sanchez",
-        "result_subtitle": "Strives for excellence in every task.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image2.png",
-        "category": "people"
+    "result_title": "Anthony Nelson",
+    "result_subtitle": "Systems analyst optimizing IT systems for efficiency.",
+    "image": "men-image-5",
+    "category": "people",
+    "role": "Systems Analyst",
+    "team": "IT Systems Team"
     },
     {
-        "result_title": "Jackson Wright",
-        "result_subtitle": "Driven by a passion for problem-solving.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image9.png",
-        "category": "people"
+    "result_title": "Zoey Carter",
+    "result_subtitle": "Social media manager growing online engagement.",
+    "image": "female-image-8",
+    "category": "people",
+    "role": "Social Media Manager",
+    "team": "Social Media Team"
     },
     {
-        "result_title": "Scarlett Lee",
-        "result_subtitle": "Always ready to tackle new challenges.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image10.png",
-        "category": "people"
+    "result_title": "Dylan Mitchell",
+    "result_subtitle": "Financial analyst providing insights for strategic decisions.",
+    "image": "men-image-10",
+    "category": "people",
+    "role": "Financial Analyst",
+    "team": "Finance Team"
     },
     {
-        "result_title": "Samuel Scott",
-        "result_subtitle": "Committed to continuous learning.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image4.png",
-        "category": "people"
+    "result_title": "Penelope Perez",
+    "result_subtitle": "Training coordinator developing employee programs.",
+    "image": "female-image-1",
+    "category": "people",
+    "role": "Training Coordinator",
+    "team": "Learning and Development Team"
     },
     {
-        "result_title": "Victoria King",
-        "result_subtitle": "Focused on driving innovation.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image1.png",
-        "category": "people"
+    "result_title": "Henry Roberts",
+    "result_subtitle": "Mobile app developer creating user-friendly applications.",
+    "image": "men-image-7",
+    "category": "people",
+    "role": "Mobile App Developer",
+    "team": "App Development Team"
     },
     {
-        "result_title": "Levi Adams",
-        "result_subtitle": "Thrives on delivering complex projects.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image7.png",
-        "category": "people"
+    "result_title": "Chloe Turner",
+    "result_subtitle": "Quality control specialist ensuring product excellence.",
+    "image": "female-image-10",
+    "category": "people",
+    "role": "Quality Control Specialist",
+    "team": "Quality Assurance Team"
     },
     {
-        "result_title": "Zoe Hill",
-        "result_subtitle": "Dedicated to improving processes.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image9.png",
-        "category": "people"
+    "result_title": "Logan Phillips",
+    "result_subtitle": "Digital strategist driving online growth initiatives.",
+    "image": "men-image-3",
+    "category": "people",
+    "role": "Digital Strategist",
+    "team": "Digital Strategy Team"
     },
     {
-        "result_title": "David Ramirez",
-        "result_subtitle": "Focused on creating meaningful impact.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image6.png",
-        "category": "people"
+    "result_title": "Layla Campbell",
+    "result_subtitle": "Events coordinator planning successful corporate events.",
+    "image": "female-image-5",
+    "category": "people",
+    "role": "Events Coordinator",
+    "team": "Events Team"
     },
     {
-        "result_title": "Penelope Green",
-        "result_subtitle": "Driven by a love for problem-solving.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image7.png",
-        "category": "people"
+    "result_title": "Gabriel Parker",
+    "result_subtitle": "Machine learning engineer developing intelligent systems.",
+    "image": "men-image-2",
+    "category": "people",
+    "role": "Machine Learning Engineer",
+    "team": "AI Team"
     },
     {
-        "result_title": "Daniel Martinez",
-        "result_subtitle": "Striving to exceed expectations.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image1.png",
-        "category": "people"
+    "result_title": "Hannah Evans",
+    "result_subtitle": "Technical writer producing clear documentation.",
+    "image": "female-image-6",
+    "category": "people",
+    "role": "Technical Writer",
+    "team": "Documentation Team"
     },
     {
-        "result_title": "Lily Anderson",
-        "result_subtitle": "Passionate about empowering others.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image5.png",
-        "category": "people"
+    "result_title": "Carter Edwards",
+    "result_subtitle": "Market researcher analyzing consumer trends.",
+    "image": "men-image-4",
+    "category": "people",
+    "role": "Market Researcher",
+    "team": "Research Team"
     },
     {
-        "result_title": "David Clark",
-        "result_subtitle": "Believes in the power of teamwork.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image2.png",
-        "category": "people"
+    "result_title": "Riley Collins",
+    "result_subtitle": "Help desk technician providing IT support.",
+    "image": "female-image-7",
+    "category": "people",
+    "role": "Help Desk Technician",
+    "team": "IT Support Team"
     },
     {
-        "result_title": "Mia Lopez",
-        "result_subtitle": "Focused on delivering high-quality results.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image8.png",
-        "category": "people"
+    "result_title": "Owen Stewart",
+    "result_subtitle": "Embedded systems engineer working on hardware integration.",
+    "image": "men-image-1",
+    "category": "people",
+    "role": "Embedded Systems Engineer",
+    "team": "Hardware Team"
     },
     {
-        "result_title": "Andrew Rodriguez",
-        "result_subtitle": "Committed to continuous improvement.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image5.png",
-        "category": "people"
+    "result_title": "Nora Sanchez",
+    "result_subtitle": "Recruiter finding top talent for our company.",
+    "image": "female-image-3",
+    "category": "people",
+    "role": "Recruiter",
+    "team": "Talent Acquisition Team"
     },
     {
-        "result_title": "Ella Scott",
-        "result_subtitle": "Thrives in collaborative environments.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image3.png",
-        "category": "people"
+    "result_title": "Jack Morris",
+    "result_subtitle": "Technical support engineer resolving complex issues.",
+    "image": "men-image-9",
+    "category": "people",
+    "role": "Technical Support Engineer",
+    "team": "Technical Support Team"
     },
     {
-        "result_title": "Ryan Lewis",
-        "result_subtitle": "Dedicated to delivering impactful solutions.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image7.png",
-        "category": "people"
+    "result_title": "Aubrey Rogers",
+    "result_subtitle": "Product designer creating intuitive user interfaces.",
+    "image": "female-image-9",
+    "category": "people",
+    "role": "Product Designer",
+    "team": "Design Team"
     },
     {
-        "result_title": "Grace Lee",
-        "result_subtitle": "Strives for excellence in every task.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image4.png",
-        "category": "people"
+    "result_title": "Isaac Reed",
+    "result_subtitle": "API developer building robust integrations.",
+    "image": "men-image-6",
+    "category": "people",
+    "role": "API Developer",
+    "team": "Integration Team"
     },
     {
-        "result_title": "Ethan Walker",
-        "result_subtitle": "Believes in the power of data-driven decisions.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image9.png",
-        "category": "people"
+    "result_title": "Eleanor Cook",
+    "result_subtitle": "Operations analyst improving business processes.",
+    "image": "female-image-2",
+    "category": "people",
+    "role": "Operations Analyst",
+    "team": "Operations Team"
     },
     {
-        "result_title": "Avery Harris",
-        "result_subtitle": "Focused on fostering a positive work culture.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image7.png",
-        "category": "people"
+    "result_title": "Wyatt Morgan",
+    "result_subtitle": "Senior engineer leading development teams.",
+    "image": "men-image-8",
+    "category": "people",
+    "role": "Senior Engineer",
+    "team": "Engineering Team"
     },
     {
-        "result_title": "Samuel King",
-        "result_subtitle": "Driven by a commitment to innovation.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image6.png",
-        "category": "people"
+    "result_title": "Scarlett Bell",
+    "result_subtitle": "Data visualization specialist turning data into insights.",
+    "image": "female-image-4",
+    "category": "people",
+    "role": "Data Visualization Specialist",
+    "team": "Data Analytics Team"
     },
     {
-        "result_title": "Scarlett Moore",
-        "result_subtitle": "Passionate about creating value through innovation.",
-        "chat_quick-action": false,
-        "favourite_quick-action": false,
-        "image": "female-image2.png",
-        "category": "people"
+    "result_title": "Julian Murphy",
+    "result_subtitle": "Web developer focusing on front-end technologies.",
+    "image": "men-image-5",
+    "category": "people",
+    "role": "Web Developer",
+    "team": "Web Development Team"
     },
     {
-        "result_title": "Joshua Wright",
-        "result_subtitle": "Always looking for new challenges.",
-        "chat_quick-action": true,
-        "favourite_quick-action": false,
-        "image": "men-image3.png",
-        "category": "people"
+    "result_title": "Lillian Bailey",
+    "result_subtitle": "Brand manager enhancing company image and outreach.",
+    "image": "female-image-8",
+    "category": "people",
+    "role": "Brand Manager",
+    "team": "Marketing Team"
     },
     {
-        "result_title": "Amelia Young",
-        "result_subtitle": "Dedicated to driving positive change.",
-        "chat_quick-action": false,
-        "favourite_quick-action": true,
-        "image": "female-image6.png",
-        "category": "people"
+    "result_title": "Levi Rivera",
+    "result_subtitle": "Infrastructure engineer maintaining system stability.",
+    "image": "men-image-10",
+    "category": "people",
+    "role": "Infrastructure Engineer",
+    "team": "IT Infrastructure Team"
     },
     {
-        "result_title": "Jacob Martinez",
-        "result_subtitle": "Committed to delivering exceptional results.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
-        "image": "men-image10.png",
-        "category": "people"
+    "result_title": "Natalie Cooper",
+    "result_subtitle": "Email marketing specialist optimizing campaign performance.",
+    "image": "female-image-1",
+    "category": "people",
+    "role": "Email Marketing Specialist",
+    "team": "Marketing Team"
+    },
+    {
+    "result_title": "Isaiah Richardson",
+    "result_subtitle": "Security engineer safeguarding our digital assets.",
+    "image": "men-image-7",
+    "category": "people",
+    "role": "Security Engineer",
+    "team": "Security Team"
+    },
+    {
+    "result_title": "Audrey Cox",
+    "result_subtitle": "CRM manager enhancing customer relationships.",
+    "image": "female-image-10",
+    "category": "people",
+    "role": "CRM Manager",
+    "team": "Customer Relationship Team"
+    },
+    {
+    "result_title": "Eli Howard",
+    "result_subtitle": "Backend developer specializing in database management.",
+    "image": "men-image-3",
+    "category": "people",
+    "role": "Backend Developer",
+    "team": "Engineering Team"
+    },
+    {
+    "result_title": "Stella Ward",
+    "result_subtitle": "Business development manager expanding market presence.",
+    "image": "female-image-5",
+    "category": "people",
+    "role": "Business Development Manager",
+    "team": "Business Development Team"
+    },
+    {
+    "result_title": "Aaron Torres",
+    "result_subtitle": "Full-stack developer adept in both front-end and back-end.",
+    "image": "men-image-2",
+    "category": "people",
+    "role": "Full-Stack Developer",
+    "team": "Engineering Team"
+    },
+    {
+    "result_title": "Violet Peterson",
+    "result_subtitle": "Community manager engaging with our user base.",
+    "image": "female-image-6",
+    "category": "people",
+    "role": "Community Manager",
+    "team": "Community Team"
+    },
+    {
+    "result_title": "Thomas Gray",
+    "result_subtitle": "Logistics coordinator ensuring timely deliveries.",
+    "image": "men-image-4",
+    "category": "people",
+    "role": "Logistics Coordinator",
+    "team": "Logistics Team"
+    },
+    {
+    "result_title": "Zoe Ramirez",
+    "result_subtitle": "Instructional designer creating effective training materials.",
+    "image": "female-image-7",
+    "category": "people",
+    "role": "Instructional Designer",
+    "team": "Learning and Development Team"
+    },
+    {
+    "result_title": "Charles James",
+    "result_subtitle": "Technical recruiter sourcing top engineering talent.",
+    "image": "men-image-1",
+    "category": "people",
+    "role": "Technical Recruiter",
+    "team": "Talent Acquisition Team"
+    },
+    {
+    "result_title": "Aurora Watson",
+    "result_subtitle": "Data analyst interpreting complex datasets.",
+    "image": "female-image-3",
+    "category": "people",
+    "role": "Data Analyst",
+    "team": "Data Analytics Team"
+    },
+    {
+    "result_title": "Caleb Brooks",
+    "result_subtitle": "Cloud solutions architect designing scalable infrastructures.",
+    "image": "men-image-9",
+    "category": "people",
+    "role": "Cloud Solutions Architect",
+    "team": "Cloud Services Team"
+    },
+    {
+    "result_title": "Brooklyn Kelly",
+    "result_subtitle": "UX researcher understanding user needs.",
+    "image": "female-image-9",
+    "category": "people",
+    "role": "UX Researcher",
+    "team": "Design Team"
+    },
+    {
+    "result_title": "Nathan Sanders",
+    "result_subtitle": "Content strategist planning impactful content.",
+    "image": "men-image-6",
+    "category": "people",
+    "role": "Content Strategist",
+    "team": "Content Team"
+    },
+    {
+    "result_title": "Lucy Price",
+    "result_subtitle": "Human resources assistant supporting HR operations.",
+    "image": "female-image-2",
+    "category": "people",
+    "role": "Human Resources Assistant",
+    "team": "Human Resources Team"
+    },
+    {
+    "result_title": "Connor Bennett",
+    "result_subtitle": "Electrical engineer designing electronic systems.",
+    "image": "men-image-8",
+    "category": "people",
+    "role": "Electrical Engineer",
+    "team": "Engineering Team"
+    },
+    {
+    "result_title": "Ruby Wood",
+    "result_subtitle": "Account executive managing key client accounts.",
+    "image": "female-image-4",
+    "category": "people",
+    "role": "Account Executive",
+    "team": "Sales Team"
+    },
+    {
+    "result_title": "Landon Barnes",
+    "result_subtitle": "Innovation manager fostering new ideas.",
+    "image": "men-image-5",
+    "category": "people",
+    "role": "Innovation Manager",
+    "team": "Innovation Team"
+    },
+    {
+    "result_title": "Madison Ross",
+    "result_subtitle": "Financial controller overseeing financial reporting.",
+    "image": "female-image-8",
+    "category": "people",
+    "role": "Financial Controller",
+    "team": "Finance Team"
+    },
+    {
+    "result_title": "Christian Henderson",
+    "result_subtitle": "Solutions consultant advising clients on software solutions.",
+    "image": "men-image-10",
+    "category": "people",
+    "role": "Solutions Consultant",
+    "team": "Consulting Team"
+    },
+    {
+    "result_title": "Avery Coleman",
+    "result_subtitle": "Digital marketing analyst tracking campaign performance.",
+    "image": "female-image-1",
+    "category": "people",
+    "role": "Digital Marketing Analyst",
+    "team": "Marketing Team"
+    },
+    {
+    "result_title": "Jonathan Jenkins",
+    "result_subtitle": "Risk manager identifying and mitigating risks.",
+    "image": "men-image-7",
+    "category": "people",
+    "role": "Risk Manager",
+    "team": "Risk Management Team"
+    },
+    {
+    "result_title": "Evelyn Perry",
+    "result_subtitle": "UX/UI designer enhancing user interface designs.",
+    "image": "female-image-10",
+    "category": "people",
+    "role": "UX/UI Designer",
+    "team": "Design Team"
+    },
+    {
+    "result_title": "Jordan Powell",
+    "result_subtitle": "IT auditor ensuring system compliance and security.",
+    "image": "men-image-3",
+    "category": "people",
+    "role": "IT Auditor",
+    "team": "Audit Team"
+    },
+    {
+    "result_title": "Camila Long",
+    "result_subtitle": "Operations director overseeing daily business activities.",
+    "image": "female-image-5",
+    "category": "people",
+    "role": "Operations Director",
+    "team": "Operations Team"
+    },
+    {
+    "result_title": "Robert Patterson",
+    "result_subtitle": "Software tester ensuring bug-free applications.",
+    "image": "men-image-2",
+    "category": "people",
+    "role": "Software Tester",
+    "team": "Quality Assurance Team"
+    },
+    {
+    "result_title": "Paisley Hughes",
+    "result_subtitle": "Customer advocate representing client interests.",
+    "image": "female-image-6",
+    "category": "people",
+    "role": "Customer Advocate",
+    "team": "Customer Service Team"
+    },
+    {
+    "result_title": "Joseph Flores",
+    "result_subtitle": "Systems architect designing enterprise solutions.",
+    "image": "men-image-4",
+    "category": "people",
+    "role": "Systems Architect",
+    "team": "Architecture Team"
+    },
+    {
+    "result_title": "Caroline Washington",
+    "result_subtitle": "Sales operations specialist streamlining sales processes.",
+    "image": "female-image-7",
+    "category": "people",
+    "role": "Sales Operations Specialist",
+    "team": "Sales Team"
+    },
+    {
+    "result_title": "Hunter Butler",
+    "result_subtitle": "Data warehouse manager organizing large datasets.",
+    "image": "men-image-1",
+    "category": "people",
+    "role": "Data Warehouse Manager",
+    "team": "Data Management Team"
+    },
+    {
+    "result_title": "Peyton Simmons",
+    "result_subtitle": "Marketing coordinator supporting promotional activities.",
+    "image": "female-image-3",
+    "category": "people",
+    "role": "Marketing Coordinator",
+    "team": "Marketing Team"
+    },
+    {
+    "result_title": "Evan Foster",
+    "result_subtitle": "Technical consultant advising on software implementations.",
+    "image": "men-image-9",
+    "category": "people",
+    "role": "Technical Consultant",
+    "team": "Consulting Team"
+    },
+    {
+    "result_title": "Sadie Gonzales",
+    "result_subtitle": "Analytics manager leading data-driven decision-making.",
+    "image": "female-image-9",
+    "category": "people",
+    "role": "Analytics Manager",
+    "team": "Data Analytics Team"
+    },
+    {
+    "result_title": "Dominic Bryant",
+    "result_subtitle": "Supply chain analyst optimizing inventory levels.",
+    "image": "men-image-6",
+    "category": "people",
+    "role": "Supply Chain Analyst",
+    "team": "Supply Chain Team"
+    },
+    {
+    "result_title": "Allison Alexander",
+    "result_subtitle": "HR generalist handling diverse HR functions.",
+    "image": "female-image-2",
+    "category": "people",
+    "role": "HR Generalist",
+    "team": "Human Resources Team"
+    },
+    {
+    "result_title": "Cooper Russell",
+    "result_subtitle": "Front-end developer specializing in React.js.",
+    "image": "men-image-8",
+    "category": "people",
+    "role": "Front-End Developer",
+    "team": "Web Development Team"
+    },
+    {
+    "result_title": "Claire Griffin",
+    "result_subtitle": "Communications manager overseeing internal communications.",
+    "image": "female-image-4",
+    "category": "people",
+    "role": "Communications Manager",
+    "team": "Communications Team"
+    },
+    {
+    "result_title": "Blake Diaz",
+    "result_subtitle": "IT project manager coordinating technology projects.",
+    "image": "men-image-5",
+    "category": "people",
+    "role": "IT Project Manager",
+    "team": "Project Management Team"
+    },
+    {
+    "result_title": "Samantha Hayes",
+    "result_subtitle": "Environmental compliance officer promoting sustainability.",
+    "image": "female-image-8",
+    "category": "people",
+    "role": "Environmental Compliance Officer",
+    "team": "Compliance Team"
+    },
+    {
+    "result_title": "Colton Myers",
+    "result_subtitle": "Business intelligence analyst delivering actionable insights.",
+    "image": "men-image-10",
+    "category": "people",
+    "role": "Business Intelligence Analyst",
+    "team": "Business Intelligence Team"
+    },
+    {
+    "result_title": "Vivian Ford",
+    "result_subtitle": "Media planner optimizing advertising strategies.",
+    "image": "female-image-1",
+    "category": "people",
+    "role": "Media Planner",
+    "team": "Advertising Team"
+    },
+    {
+    "result_title": "Adam Hamilton",
+    "result_subtitle": "Infrastructure manager overseeing IT systems.",
+    "image": "men-image-7",
+    "category": "people",
+    "role": "Infrastructure Manager",
+    "team": "IT Infrastructure Team"
+    },
+    {
+    "result_title": "Lydia Graham",
+    "result_subtitle": "Corporate trainer enhancing employee skills.",
+    "image": "female-image-10",
+    "category": "people",
+    "role": "Corporate Trainer",
+    "team": "Learning and Development Team"
     },
     {
         "result_title": "Sam Limby",
         "result_subtitle": "Product Designer for Global Search.",
-        "chat_quick-action": true,
-        "favourite_quick-action": true,
         "image": "image1.png",
         "category": "people",
         "role": "Product Designer",
