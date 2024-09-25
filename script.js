@@ -508,36 +508,43 @@ document.addEventListener("DOMContentLoaded", function() {
     let pageQuickFilterCount = 0;
 
     // quick filter actions
-    allQuickFilter.addEventListener("click", function() {
-        containerLimit = true;
-        allQuickFilterCount = 1;
-        quickFilterLogic()
-        filterCheck()
-        pageSectionLimit()
-        peopleSectionLimit()
-    });
 
-    peopleQuickFilter.addEventListener("click", function() {
-        containerLimit = false;
-        peopleQuickFilterCount = 1;
-        pageQuickFilterCount = 0;
-        allQuickFilterCount = 0;
-        console.log(containerLimit)
-        quickFilterLogic()
-        filterCheck()
-        peopleSectionLimit()
-    });
+    if (allQuickFilter) {
+        allQuickFilter.addEventListener("click", function() {
+            containerLimit = true;
+            allQuickFilterCount = 1;
+            quickFilterLogic()
+            filterCheck()
+            pageSectionLimit()
+            peopleSectionLimit()
+        });
+    }
 
-    pageQuickFilter.addEventListener("click", function() {
-        containerLimit = false;
-        pageQuickFilterCount = 1;
-        peopleQuickFilterCount = 0;
-        allQuickFilterCount = 0;
-        console.log(containerLimit)
-        quickFilterLogic()
-        filterCheck()
-        pageSectionLimit()
-    });
+    if (peopleQuickFilter) {
+        peopleQuickFilter.addEventListener("click", function() {
+            containerLimit = false;
+            peopleQuickFilterCount = 1;
+            pageQuickFilterCount = 0;
+            allQuickFilterCount = 0;
+            console.log(containerLimit)
+            quickFilterLogic()
+            filterCheck()
+            peopleSectionLimit()
+        });
+    }
+
+    if (pageQuickFilter) {
+        pageQuickFilter.addEventListener("click", function() {
+            containerLimit = false;
+            pageQuickFilterCount = 1;
+            peopleQuickFilterCount = 0;
+            allQuickFilterCount = 0;
+            console.log(containerLimit)
+            quickFilterLogic()
+            filterCheck()
+            pageSectionLimit()
+        });
+    }
 
     function quickFilterLogic() {
         console.log("filter flow actioned")

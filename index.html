@@ -9,6 +9,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Global Search Prototype</title>
+    <script>
+        (function (m, a, z, e) {
+          var s, t;
+          try {
+            t = m.sessionStorage.getItem('maze-us');
+          } catch (err) {}
+        
+          if (!t) {
+            t = new Date().getTime();
+            try {
+              m.sessionStorage.setItem('maze-us', t);
+            } catch (err) {}
+          }
+        
+          s = a.createElement('script');
+          s.src = z + '?apiKey=' + e;
+          s.async = true;
+          a.getElementsByTagName('head')[0].appendChild(s);
+          m.mazeUniversalSnippetApiKey = e;
+        })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', 'f0582ec2-5fc3-4ed3-95bf-c50693d87c2e');
+    </script>
 </head>
 <body>
     <script src="script.js"></script>
