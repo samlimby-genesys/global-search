@@ -834,6 +834,18 @@
     line-height: 18px; /* 150% */
 }
 
+/* Test */
+
+.link-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.task-complete_message {
+    margin: auto;
+}
+
 
 
 

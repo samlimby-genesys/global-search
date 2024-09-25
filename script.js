@@ -99,6 +99,30 @@ document.addEventListener("DOMContentLoaded", function() {
                     let innerHTMLContent = `
                     `;
 
+                    if (result.result_title === "William Jackson") {
+                        innerHTMLContent += `
+                        <a href="task1.html" class="link-wrapper" style="text-decoration: none;">
+                        `
+                    }
+
+                    if (result.result_title === "London, United Kingdom") {
+                        innerHTMLContent += `
+                        <a href="task2.html" class="link-wrapper" style="text-decoration: none;">
+                        `
+                    }
+
+                    if (result.result_title === "Architect") {
+                        innerHTMLContent += `
+                        <a href="task3.html" class="link-wrapper" style="text-decoration: none;">
+                        `
+                    }
+
+                    if (result.result_title === "Messenger Configurations") {
+                        innerHTMLContent += `
+                        <a href="task4.html" class="link-wrapper" style="text-decoration: none;">
+                        `
+                    }
+
                     // specifying id and adding image to just people
                     if (result.category === "people") {
                         console.log(result.image)
@@ -187,6 +211,30 @@ document.addEventListener("DOMContentLoaded", function() {
                                 </div>
                             </div>
                         `;
+                    }
+
+                    if (result.result_title === "William Jackson") {
+                        innerHTMLContent += `
+                        </a>
+                        `
+                    }
+
+                    if (result.result_title === "London, United Kingdom") {
+                        innerHTMLContent += `
+                        </a>
+                        `
+                    }
+
+                    if (result.result_title === "Architect") {
+                        innerHTMLContent += `
+                        </a>
+                        `
+                    }
+
+                    if (result.result_title === "Messenger Configurations") {
+                        innerHTMLContent += `
+                        </a>
+                        `
                     }
 
 
